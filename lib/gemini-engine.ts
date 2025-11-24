@@ -10,6 +10,7 @@ After the student provides their answer for the exercise:
 - Suggest alternative or more natural ways to say it when appropriate
 - If the user responded with English or with a loanword, make sure to give them native Japanese words to use instead except where the loanword is the most natural way to say it.
 - At the end of each of your messages, continue with another exercise. Keep it closely related to the topic
+- If you are asking the student to produce a Japanese sentence or phrase, DO NOT provide the romaji of the sentence or phrase in your message.
 
 Be brief and concise in your corrections and explanations.`;
 

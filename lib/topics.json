@@ -2,19 +2,19 @@
   "difficulties": {
     "elementary": {
       "name": "Elementary",
-      "instruction": "Use very simple vocabulary and basic sentence structures. Explain concepts in a beginner-friendly way. Use hiragana with furigana support. Keep sentences short and clear."
+      "instruction": "ELEMENTARY SCHOOL LEVEL: Use only the most basic, everyday vocabulary that a young child would know. Keep ALL sentences very short (5-8 words maximum). Use only simple, single-clause sentences with basic subject-verb-object structure. Avoid any compound sentences, subordinate clauses, or complex constructions. Examples should be concrete and relate to immediate, tangible experiences (family, food, colors, animals, simple actions)."
     },
     "middle-school": {
       "name": "Middle School",
-      "instruction": "Use intermediate vocabulary and more complex sentence patterns. Introduce common kanji with readings. Provide explanations that assume some foundational knowledge."
+      "instruction": "MIDDLE SCHOOL LEVEL: Use common everyday vocabulary that a teenager would use. Sentences should be moderate length (8-12 words). You may use compound sentences with 2 clauses connected by simple conjunctions. Include more varied verb forms (te-form, potential form, basic conditionals). Grammar should include various tenses, polite and casual forms, and common sentence patterns. This is for learners with basic foundation."
     },
     "high-school": {
       "name": "High School",
-      "instruction": "Use advanced vocabulary and complex grammar structures. Include more kanji and idiomatic expressions. Assume solid understanding of basic concepts."
+      "instruction": "HIGH SCHOOL LEVEL: Use a broader vocabulary including some less common words and idiomatic expressions. Sentences should be longer (12-18 words) and may contain multiple clauses with subordinate constructions. Include complex grammar patterns (causative, passive, conditional forms, relative clauses). Topics can be more abstract (opinions, hypotheticals, explanations of processes). This is for intermediate to advanced learners who understand complex sentence structures."
     },
     "college": {
       "name": "College/Advanced",
-      "instruction": "Use sophisticated vocabulary and nuanced expressions. Include formal language, literary forms, and complex kanji. Engage with abstract concepts and cultural nuances."
+      "instruction": "COLLEGE/ADVANCED LEVEL: Use sophisticated, nuanced vocabulary including formal expressions, literary language, and specialized terms. Sentences should be long and complex (18+ words) with multiple embedded clauses, relative clauses, and advanced grammatical constructions. Include honorific language, humble forms, and formal registers. Topics should be abstract and intellectually demanding (cultural analysis, philosophical concepts, formal discourse). This is for advanced learners who can handle native-level complexity."
     }
   },
   "topics": {
@@ -173,10 +173,6 @@
     "word-order": {
       "name": "Japanese Word Order",
       "instruction": "Give Japanese sentences with scrambled word order. Ask the student to rearrange the words into the correct, natural order."
-    },
-    "dropping-pronouns": {
-      "name": "Dropping Pronouns",
-      "instruction": "Give Japanese sentences with unnecessary pronouns. Ask the student to rewrite them more naturally by omitting the pronouns where appropriate."
     },
     "demonstratives": {
       "name": "Demonstratives",

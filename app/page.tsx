@@ -12,6 +12,7 @@ export default function Home() {
   const [selectedTopic, setSelectedTopic] = useState("random")
   const [selectedDifficulty, setSelectedDifficulty] = useState("elementary")
   const [useJapanese, setUseJapanese] = useState(false)
+  const [chatKey, setChatKey] = useState(0)
 
   const handleStartChat = () => {
     setChatStarted(true)
@@ -22,6 +23,7 @@ export default function Home() {
     setSelectedTopic("random")
     setSelectedDifficulty("elementary")
     setUseJapanese(false)
+    setChatKey(prev => prev + 1)
   }
 
   return (
@@ -54,7 +56,7 @@ export default function Home() {
         </div>
       ) : (
         <div className="flex-1 flex flex-col max-w-full overflow-hidden">
-          <ChatInterface topic={selectedTopic} difficulty={selectedDifficulty} useJapanese={useJapanese} onRefresh={handleRefresh} />
+          <ChatInterface key={chatKey} topic={selectedTopic} difficulty={selectedDifficulty} useJapanese={useJapanese} onRefresh={handleRefresh} />
         </div>
       )}
     </main>

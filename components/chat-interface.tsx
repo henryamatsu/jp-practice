@@ -56,7 +56,7 @@ export function ChatInterface({
     if (!initialized) {
       initializeChat();
     }
-  }, [initialized, topic]);
+  }, [initialized, topic, difficulty, useJapanese]);
 
   const initializeChat = async () => {
     setIsLoading(true);
@@ -131,7 +131,10 @@ export function ChatInterface({
         setMessages((prev) => {
           const updated = [...prev];
           if (updated.length > 0) {
-            updated[updated.length - 1] = { ...updated[updated.length - 1], failed: true };
+            updated[updated.length - 1] = {
+              ...updated[updated.length - 1],
+              failed: true,
+            };
           }
           return updated;
         });
@@ -145,7 +148,10 @@ export function ChatInterface({
       setMessages((prev) => {
         const updated = [...prev];
         if (updated.length > 0) {
-          updated[updated.length - 1] = { ...updated[updated.length - 1], failed: true };
+          updated[updated.length - 1] = {
+            ...updated[updated.length - 1],
+            failed: true,
+          };
         }
         return updated;
       });
@@ -213,7 +219,9 @@ export function ChatInterface({
       <div className="flex items-center justify-between p-4 border-b border-border sticky top-0 bg-background/95 backdrop-blur shrink-0">
         <div className="flex flex-col min-w-0 flex-1 mr-2">
           <h2 className="text-lg font-semibold truncate">Japanese Learner</h2>
-          <p className="text-sm text-muted-foreground truncate">{getTopicName()}</p>
+          <p className="text-sm text-muted-foreground truncate">
+            {getTopicName()}
+          </p>
         </div>
         <Button
           onClick={onRefresh}
