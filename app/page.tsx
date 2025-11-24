@@ -25,8 +25,8 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-background text-foreground flex flex-col">
-      <div className="absolute top-4 right-4">
+    <main className="min-h-screen max-w-full overflow-x-hidden bg-background text-foreground flex flex-col">
+      <div className="absolute top-4 right-4 z-10">
         <ThemeToggle />
       </div>
 
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
         </div>
       ) : (
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col max-w-full overflow-hidden">
           <ChatInterface topic={selectedTopic} difficulty={selectedDifficulty} useJapanese={useJapanese} onRefresh={handleRefresh} />
         </div>
       )}

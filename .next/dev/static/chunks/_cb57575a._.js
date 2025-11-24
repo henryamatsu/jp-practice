@@ -16,23 +16,23 @@ function MessageList({ messages, isLoading }) {
             messages.map((message, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: `flex ${message.role === "user" ? "justify-end" : "justify-start"}`,
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: `max-w-xs sm:max-w-md lg:max-w-lg px-4 py-2 rounded-lg ${message.role === "user" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`,
+                        className: `max-w-xs sm:max-w-md lg:max-w-lg px-4 py-2 rounded-lg ${message.failed ? "bg-destructive/10 text-destructive border border-destructive/20" : message.role === "user" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-sm sm:text-base break-words whitespace-pre-wrap",
                             children: message.content
                         }, void 0, false, {
                             fileName: "[project]/components/message-list.tsx",
-                            lineNumber: 23,
+                            lineNumber: 28,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/message-list.tsx",
-                        lineNumber: 18,
+                        lineNumber: 19,
                         columnNumber: 11
                     }, this)
                 }, index, false, {
                     fileName: "[project]/components/message-list.tsx",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this)),
             isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -46,7 +46,7 @@ function MessageList({ messages, isLoading }) {
                                 className: "w-2 h-2 bg-current rounded-full animate-bounce"
                             }, void 0, false, {
                                 fileName: "[project]/components/message-list.tsx",
-                                lineNumber: 31,
+                                lineNumber: 36,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -56,7 +56,7 @@ function MessageList({ messages, isLoading }) {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/message-list.tsx",
-                                lineNumber: 32,
+                                lineNumber: 37,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -66,29 +66,29 @@ function MessageList({ messages, isLoading }) {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/message-list.tsx",
-                                lineNumber: 33,
+                                lineNumber: 38,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/message-list.tsx",
-                        lineNumber: 30,
+                        lineNumber: 35,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/message-list.tsx",
-                    lineNumber: 29,
+                    lineNumber: 34,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/message-list.tsx",
-                lineNumber: 28,
+                lineNumber: 33,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/message-list.tsx",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }
@@ -205,14 +205,14 @@ function MessageInput({ input, setInput, onSubmit, isLoading }) {
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
         onSubmit: onSubmit,
-        className: "flex gap-2",
+        className: "flex gap-2 w-full",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
                 value: input,
                 onChange: (e)=>setInput(e.target.value),
                 onKeyDown: handleKeyDown,
                 placeholder: "Type your message... (Shift+Enter for new line)",
-                className: "flex-1 bg-background border border-input rounded-lg px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary max-h-24",
+                className: "flex-1 min-w-0 bg-background border border-input rounded-lg px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary max-h-24",
                 rows: 1,
                 disabled: isLoading
             }, void 0, false, {
@@ -224,7 +224,7 @@ function MessageInput({ input, setInput, onSubmit, isLoading }) {
                 type: "submit",
                 disabled: isLoading || !input.trim(),
                 size: "sm",
-                className: "gap-2",
+                className: "gap-2 shrink-0",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"], {
                     className: "w-4 h-4"
                 }, void 0, false, {
@@ -267,6 +267,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$message$2d$lis
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$message$2d$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/message-input.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/rotate-ccw.js [app-client] (ecmascript) <export default as RotateCcw>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$refresh$2d$cw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RefreshCw$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/refresh-cw.js [app-client] (ecmascript) <export default as RefreshCw>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$topics$2e$json__$28$json$29$__ = __turbopack_context__.i("[project]/lib/topics.json (json)");
 ;
 var _s = __turbopack_context__.k.signature();
@@ -284,6 +285,7 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
     const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [initialized, setInitialized] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [actualTopic, setActualTopic] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(topic);
+    const [lastUserMessage, setLastUserMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const messagesEndRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     // Get topic display name
     const getTopicName = ()=>{
@@ -354,6 +356,7 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
         if (!input.trim() || isLoading) return;
         const userMessage = input.trim();
         setInput("");
+        setLastUserMessage(userMessage);
         // Add user message to history
         const updatedMessages = [
             ...messages,
@@ -388,58 +391,146 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                             content: data.message
                         }
                     ]);
+            } else {
+                // Mark the last message as failed if no response
+                setMessages((prev)=>{
+                    const updated = [
+                        ...prev
+                    ];
+                    if (updated.length > 0) {
+                        updated[updated.length - 1] = {
+                            ...updated[updated.length - 1],
+                            failed: true
+                        };
+                    }
+                    return updated;
+                });
             }
             if (data.actualTopic) {
                 setActualTopic(data.actualTopic);
             }
         } catch (error) {
             console.error("[v0] Failed to send message:", error);
+            // Mark the last message as failed
+            setMessages((prev)=>{
+                const updated = [
+                    ...prev
+                ];
+                if (updated.length > 0) {
+                    updated[updated.length - 1] = {
+                        ...updated[updated.length - 1],
+                        failed: true
+                    };
+                }
+                return updated;
+            });
+        } finally{
+            setIsLoading(false);
+        }
+    };
+    const handleRetry = async ()=>{
+        if (!lastUserMessage || isLoading) return;
+        // Remove the failed message if it exists
+        setMessages((prev)=>{
+            const filtered = prev.filter((msg)=>!msg.failed);
+            return filtered;
+        });
+        // Retry with the last user message
+        const recentMessages = messages.filter((msg)=>!msg.failed).slice(-20);
+        setIsLoading(true);
+        try {
+            const response = await fetch("/api/chat", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    messages: recentMessages,
+                    topic: actualTopic,
+                    difficulty,
+                    useJapanese
+                })
+            });
+            const data = await response.json();
+            if (data.message) {
+                setMessages((prev)=>[
+                        ...prev,
+                        {
+                            role: "assistant",
+                            content: data.message
+                        }
+                    ]);
+            } else {
+                // Mark as failed again
+                setMessages((prev)=>[
+                        ...prev,
+                        {
+                            role: "user",
+                            content: lastUserMessage,
+                            failed: true
+                        }
+                    ]);
+            }
+            if (data.actualTopic) {
+                setActualTopic(data.actualTopic);
+            }
+        } catch (error) {
+            console.error("[v0] Failed to retry message:", error);
+            // Mark as failed again
+            setMessages((prev)=>[
+                    ...prev,
+                    {
+                        role: "user",
+                        content: lastUserMessage,
+                        failed: true
+                    }
+                ]);
         } finally{
             setIsLoading(false);
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "h-full flex flex-col bg-background",
+        className: "h-full w-full max-w-full flex flex-col bg-background overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center justify-between p-4 border-b border-border sticky top-0 bg-background/95 backdrop-blur",
+                className: "flex items-center justify-between p-4 border-b border-border sticky top-0 bg-background/95 backdrop-blur shrink-0",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-col",
+                        className: "flex flex-col min-w-0 flex-1 mr-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                 className: "text-lg font-semibold truncate",
                                 children: "Japanese Learner"
                             }, void 0, false, {
                                 fileName: "[project]/components/chat-interface.tsx",
-                                lineNumber: 142,
+                                lineNumber: 215,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-sm text-muted-foreground",
+                                className: "text-sm text-muted-foreground truncate",
                                 children: getTopicName()
                             }, void 0, false, {
                                 fileName: "[project]/components/chat-interface.tsx",
-                                lineNumber: 143,
+                                lineNumber: 216,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/chat-interface.tsx",
-                        lineNumber: 141,
+                        lineNumber: 214,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                         onClick: onRefresh,
                         variant: "outline",
                         size: "sm",
-                        className: "gap-2 bg-transparent",
+                        className: "gap-2 bg-transparent shrink-0",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__["RotateCcw"], {
                                 className: "w-4 h-4"
                             }, void 0, false, {
                                 fileName: "[project]/components/chat-interface.tsx",
-                                lineNumber: 151,
+                                lineNumber: 224,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -447,70 +538,116 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                                 children: "Refresh"
                             }, void 0, false, {
                                 fileName: "[project]/components/chat-interface.tsx",
-                                lineNumber: 152,
+                                lineNumber: 225,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/chat-interface.tsx",
-                        lineNumber: 145,
+                        lineNumber: 218,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/chat-interface.tsx",
-                lineNumber: 140,
+                lineNumber: 213,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex-1 overflow-y-auto p-4",
+                className: "flex-1 overflow-y-auto overflow-x-hidden p-4",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$message$2d$list$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MessageList"], {
                         messages: messages,
                         isLoading: isLoading
                     }, void 0, false, {
                         fileName: "[project]/components/chat-interface.tsx",
-                        lineNumber: 158,
+                        lineNumber: 231,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         ref: messagesEndRef
                     }, void 0, false, {
                         fileName: "[project]/components/chat-interface.tsx",
-                        lineNumber: 159,
+                        lineNumber: 232,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/chat-interface.tsx",
-                lineNumber: 157,
+                lineNumber: 230,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "border-t border-border bg-background/95 backdrop-blur sticky bottom-0 p-4",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$message$2d$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MessageInput"], {
-                    input: input,
-                    setInput: setInput,
-                    onSubmit: handleSendMessage,
-                    isLoading: isLoading
-                }, void 0, false, {
+                className: "border-t border-border bg-background/95 backdrop-blur sticky bottom-0 p-4 shrink-0",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "space-y-2 max-w-full",
+                    children: [
+                        lastUserMessage && messages.some((msg)=>msg.failed) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center gap-2 text-sm text-muted-foreground flex-wrap",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    children: "Failed to get response"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/chat-interface.tsx",
+                                    lineNumber: 240,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                    onClick: handleRetry,
+                                    disabled: isLoading,
+                                    variant: "outline",
+                                    size: "sm",
+                                    className: "gap-2 shrink-0",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$refresh$2d$cw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RefreshCw$3e$__["RefreshCw"], {
+                                            className: "w-3 h-3"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/chat-interface.tsx",
+                                            lineNumber: 248,
+                                            columnNumber: 17
+                                        }, this),
+                                        "Retry"
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/chat-interface.tsx",
+                                    lineNumber: 241,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/chat-interface.tsx",
+                            lineNumber: 239,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$message$2d$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MessageInput"], {
+                            input: input,
+                            setInput: setInput,
+                            onSubmit: handleSendMessage,
+                            isLoading: isLoading
+                        }, void 0, false, {
+                            fileName: "[project]/components/chat-interface.tsx",
+                            lineNumber: 253,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/components/chat-interface.tsx",
-                    lineNumber: 164,
+                    lineNumber: 237,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/chat-interface.tsx",
-                lineNumber: 163,
+                lineNumber: 236,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/chat-interface.tsx",
-        lineNumber: 138,
+        lineNumber: 211,
         columnNumber: 5
     }, this);
 }
-_s(ChatInterface, "D4WwM3+Hnk4zeMCjMZjk3mUlyW4=");
+_s(ChatInterface, "ZBSvR7PGgms4LWzg1b2bTRHLfik=");
 _c = ChatInterface;
 var _c;
 __turbopack_context__.k.register(_c, "ChatInterface");
@@ -1183,10 +1320,10 @@ function Home() {
         setUseJapanese(false);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-        className: "min-h-screen bg-background text-foreground flex flex-col",
+        className: "min-h-screen max-w-full overflow-x-hidden bg-background text-foreground flex flex-col",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute top-4 right-4",
+                className: "absolute top-4 right-4 z-10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$theme$2d$toggle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ThemeToggle"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
                     lineNumber: 30,
@@ -1271,7 +1408,7 @@ function Home() {
                 lineNumber: 34,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex-1 flex flex-col",
+                className: "flex-1 flex flex-col max-w-full overflow-hidden",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$chat$2d$interface$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ChatInterface"], {
                     topic: selectedTopic,
                     difficulty: selectedDifficulty,

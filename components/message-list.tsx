@@ -3,6 +3,7 @@
 interface Message {
   role: "user" | "assistant"
   content: string
+  failed?: boolean
 }
 
 interface MessageListProps {
@@ -17,7 +18,11 @@ export function MessageList({ messages, isLoading }: MessageListProps) {
         <div key={index} className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}>
           <div
             className={`max-w-xs sm:max-w-md lg:max-w-lg px-4 py-2 rounded-lg ${
-              message.role === "user" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"
+              message.failed
+                ? "bg-destructive/10 text-destructive border border-destructive/20"
+                : message.role === "user"
+                ? "bg-primary text-primary-foreground"
+                : "bg-secondary text-secondary-foreground"
             }`}
           >
             <p className="text-sm sm:text-base break-words whitespace-pre-wrap">{message.content}</p>

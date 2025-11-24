@@ -163,16 +163,17 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$google$2f$
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$topics$2e$json__$28$json$29$__ = __turbopack_context__.i("[project]/lib/topics.json (json)");
 ;
 ;
-const BASE_SYSTEM_INSTRUCTION = `You are a helpful Japanese language tutor. Your primary teaching method is to give the student English sentences and ask them to translate those sentences into Japanese. 
+const BASE_SYSTEM_INSTRUCTION = `You are a helpful Japanese language tutor. You will walk the student through topic-based exercises.
 
-After the student provides their translation:
+After the student provides their answer for the exercise:
 - Tell them if they got it right or wrong
 - If wrong, explain what was incorrect
-- Provide the correct translation
+- Provide the correct answer
 - Suggest alternative or more natural ways to say it when appropriate
-- Then give them the next English sentence to translate
+- If the user responded with English or with a loanword, make sure to give them native Japanese words to use instead except where the loanword is the most natural way to say it.
+- At the end of each of your messages, continue with another exercise. Keep it closely related to the topic
 
-Don't change topics unless the student asks you to. Be brief and concise in your corrections and explanations.`;
+Be brief and concise in your corrections and explanations.`;
 class GeminiEngine {
     MODEL_CODE = "gemini-2.5-flash-lite";
     client;
