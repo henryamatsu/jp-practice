@@ -1,32 +1,40 @@
-import { GoogleGenAI, Content } from "@google/genai";
+import {
+  GoogleGenAI,
+  Content,
+  FunctionDeclaration,
+  Type,
+  FunctionCallingConfigMode,
+} from "@google/genai";
 import topicsData from "./topics.json";
-
-const BASE_SYSTEM_INSTRUCTION = `You are a helpful Japanese language tutor. You will walk the student through topic-based exercises with a spaced repetition review system.
-
-REVIEW SYSTEM - CRITICAL:
-- Track the number of NEW questions you have asked (not review questions)
-- After every 5 NEW questions, you MUST enter REVIEW MODE
-- In REVIEW MODE: Re-ask the exact same 5 questions that you just asked (questions 1-5, then 6-10, then 11-15, etc.)
-- When re-asking questions in REVIEW MODE, say "Review time! Let's practice these again:" before presenting the first review question
-- After the student completes all 5 review questions, return to asking NEW questions
-- Continue this pattern: 5 new questions → review those 5 → 5 new questions → review those 5 → etc.
-- Keep track of which questions you've asked so you can repeat them exactly during review
-
-After the student provides their answer for the exercise:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, make sure to give them native Japanese words to use instead except where the loanword is the most natural way to say it.
-- At the end of each of your messages, continue with another exercise (either a new one or the next review question depending on the mode)
-- If you are asking the student to produce a Japanese sentence or phrase, DO NOT provide the romaji of the sentence or phrase in your message.
-
-Be brief and concise in your corrections and explanations.`;
+import {
+  CORRECTION_INSTRUCTION,
+  QUESTION_GENERATION_INSTRUCTION,
+  LANGUAGE_DISPLAY_JAPANESE,
+  LANGUAGE_DISPLAY_ROMAJI,
+} from "./prompts";
 
 interface Message {
   role: "user" | "assistant";
   content: string;
 }
+
+const generateQuestionsDeclaration: FunctionDeclaration = {
+  name: "generateQuestions",
+  parameters: {
+    type: Type.OBJECT,
+    description: "Generate 5 practice questions for the student to answer.",
+    properties: {
+      questions: {
+        type: Type.ARRAY,
+        items: {
+          type: Type.STRING,
+        },
+        description: "An array of exactly 5 practice questions",
+      },
+    },
+    required: ["questions"],
+  },
+};
 
 class GeminiEngine {
   MODEL_CODE = "gemini-2.5-flash-lite";
@@ -39,21 +47,47 @@ class GeminiEngine {
   }
 
   /**
-   * Get the system instruction for a given topic, difficulty, and Japanese usage preference
+   * Get the system instruction for corrections (0 temperature)
+   * This is ONLY for providing feedback, NOT for generating questions
    */
-  getSystemInstruction(
+  getCorrectionSystemInstruction(topic: string, useJapanese: boolean): string {
+    let instruction = CORRECTION_INSTRUCTION;
+
+    // Add Japanese text preference
+    instruction += useJapanese
+      ? LANGUAGE_DISPLAY_JAPANESE
+      : LANGUAGE_DISPLAY_ROMAJI;
+
+    // Handle random topic - will be selected by the caller
+    if (topic === "random") {
+      return instruction;
+    }
+
+    // Add topic-specific instruction - THIS IS WHERE "Give English sentences..." comes from
+    // const topicConfig =
+    //   topicsData.topics[topic as keyof typeof topicsData.topics];
+    // if (topicConfig) {
+    //   instruction += `\n\nTopic Focus: ${topicConfig.instruction}`;
+    // }
+
+    return instruction;
+  }
+
+  /**
+   * Get the system instruction for question generation (high temperature)
+   * This is ONLY for generating questions, NOT for corrections
+   */
+  getQuestionGenerationInstruction(
     topic: string,
     difficulty: string,
     useJapanese: boolean
   ): string {
-    let instruction = BASE_SYSTEM_INSTRUCTION;
+    let instruction = QUESTION_GENERATION_INSTRUCTION;
 
     // Add Japanese text preference
-    if (useJapanese) {
-      instruction += `\n\nLanguage Display: Use Japanese characters (hiragana, katakana, and kanji as appropriate for the difficulty level). Include romaji in parentheses when helpful.`;
-    } else {
-      instruction += `\n\nLanguage Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.`;
-    }
+    instruction += useJapanese
+      ? LANGUAGE_DISPLAY_JAPANESE
+      : LANGUAGE_DISPLAY_ROMAJI;
 
     // Add difficulty-specific instruction
     const difficultyConfig =
@@ -69,20 +103,12 @@ class GeminiEngine {
       return instruction;
     }
 
-    // Add topic-specific instruction
+    // Add topic-specific instruction - THIS IS WHERE "Give English sentences..." comes from
     const topicConfig =
       topicsData.topics[topic as keyof typeof topicsData.topics];
     if (topicConfig) {
       instruction += `\n\nTopic Focus: ${topicConfig.instruction}`;
     }
-
-    // Important instruction about not giving away answers
-    instruction += `\n\nIMPORTANT: When asking the student to translate a Japanese sentence or phrase, do NOT provide the English translation in your question. Only show the Japanese/romaji that they need to translate. Wait for their answer before providing the correct translation.`;
-
-    // Log the full system instruction for debugging
-    console.log("=== SYSTEM INSTRUCTION ===");
-    console.log(instruction);
-    console.log("=========================");
 
     return instruction;
   }
@@ -107,51 +133,157 @@ class GeminiEngine {
   }
 
   /**
-   * Generate a response from the model
-   * Returns both the text response and the actual topic used (useful when topic is "random")
+   * Generate 5 new questions using high temperature
+   * Returns both questions and the actual topic used
    */
-  async generateResponse(
-    messages: Message[],
+  async generateQuestions(
     topic: string,
     difficulty: string,
     useJapanese: boolean,
-    isInitial: boolean = false
-  ): Promise<{ text: string; actualTopic: string }> {
-    // If topic is random, pick a random topic for this session
+    previousQuestions?: string[]
+  ): Promise<{ questions: string[]; actualTopic: string }> {
     const actualTopic = topic === "random" ? this.getRandomTopic() : topic;
-    const systemInstruction = this.getSystemInstruction(
+    const systemInstruction = this.getQuestionGenerationInstruction(
       actualTopic,
       difficulty,
       useJapanese
     );
 
-    let contents: Content[];
-    // Use higher temperature for initial greeting (more variety)
-    // Use lower temperature for teaching responses (more consistent/accurate)
-    const temperature = isInitial ? 1.0 : 0;
+    let prompt = "Generate 5 new practice questions for the student.";
+    if (previousQuestions && previousQuestions.length > 0) {
+      prompt += `\n\nPrevious questions to avoid repeating:\n${previousQuestions.join(
+        "\n"
+      )}`;
+    }
 
-    if (isInitial) {
-      // For initial message, start directly with the lesson (no greeting)
-      contents = [
+    const response = await this.client.models.generateContent({
+      model: this.MODEL_CODE,
+      contents: [
         {
           role: "user",
-          parts: [
-            {
-              text: "Start the Japanese learning session. Skip any greetings or introductions. Jump directly into the first exercise, question, or task for this topic.",
-            },
-          ],
+          parts: [{ text: prompt }],
         },
-      ];
-    } else {
-      // Convert message history to Gemini format
-      contents = this.convertMessagesToContents(messages);
+      ],
+      config: {
+        temperature: 1, // High temperature for diversity
+        systemInstruction,
+        toolConfig: {
+          functionCallingConfig: {
+            mode: FunctionCallingConfigMode.AUTO,
+          },
+        },
+        tools: [
+          {
+            functionDeclarations: [generateQuestionsDeclaration],
+          },
+        ],
+      },
+    });
+
+    // Extract questions from function call
+    const functionCall = response.functionCalls?.[0];
+    if (functionCall && functionCall.name === "generateQuestions") {
+      const questions = functionCall.args?.questions as string[];
+      if (questions && Array.isArray(questions) && questions.length === 5) {
+        console.log("=== GENERATED QUESTIONS ===");
+        console.log(questions);
+        console.log("===========================");
+        return { questions, actualTopic };
+      }
+    }
+
+    // Fallback: parse from text if function calling didn't work
+    console.warn("Function calling failed, falling back to text parsing");
+    const questions = this.fallbackQuestionParsing(response.text || "");
+    return { questions, actualTopic };
+  }
+
+  /**
+   * Fallback method to parse questions from text response
+   */
+  private fallbackQuestionParsing(text: string): string[] {
+    // Try to extract questions from numbered list or JSON
+    const questions: string[] = [];
+
+    // Try JSON first
+    try {
+      const jsonMatch = text.match(/\[[\s\S]*\]/);
+      if (jsonMatch) {
+        const parsed = JSON.parse(jsonMatch[0]);
+        if (Array.isArray(parsed)) {
+          return parsed.slice(0, 5);
+        }
+      }
+    } catch (e) {
+      // Continue to next parsing method
+    }
+
+    // Try numbered list
+    const lines = text.split("\n");
+    for (const line of lines) {
+      const match = line.match(/^\d+[\.\)]\s*(.+)$/);
+      if (match && match[1]) {
+        questions.push(match[1].trim());
+        if (questions.length === 5) break;
+      }
+    }
+
+    // If we got 5 questions, return them
+    if (questions.length === 5) {
+      return questions;
+    }
+
+    // Last resort: generate generic questions
+    console.error("Failed to parse questions, using fallback");
+    return [
+      "Translate this to Japanese: I eat breakfast.",
+      "Translate this to Japanese: Where is the station?",
+      "Translate this to Japanese: I like reading books.",
+      "Translate this to Japanese: What time is it?",
+      "Translate this to Japanese: Thank you very much.",
+    ];
+  }
+
+  /**
+   * Generate a response from the model (corrections only, 0 temperature)
+   * Returns both the text response and the actual topic used (useful when topic is "random")
+   */
+  async generateResponse(
+    messages: Message[],
+    topic: string,
+    useJapanese: boolean,
+    currentQuestion: string,
+    nextQuestion: string
+  ): Promise<{ text: string; actualTopic: string }> {
+    // If topic is random, pick a random topic for this session
+    const actualTopic = topic === "random" ? this.getRandomTopic() : topic;
+    const systemInstruction = this.getCorrectionSystemInstruction(
+      actualTopic,
+      useJapanese
+    );
+    console.log("=== SYSTEM INSTRUCTION ===");
+    console.log(systemInstruction);
+    console.log("===========================");
+
+    // Convert message history to Gemini format
+    const contents = this.convertMessagesToContents(messages);
+
+    // Add context about the current question and tell it what to ask next
+    const lastContent = contents[contents.length - 1];
+    if (
+      lastContent &&
+      lastContent.role === "user" &&
+      lastContent.parts &&
+      lastContent.parts[0]
+    ) {
+      lastContent.parts[0].text = `Current question: ${currentQuestion}\n\nStudent's answer: ${lastContent.parts[0].text}\n\nAfter providing feedback, ask this next question: ${nextQuestion}`;
     }
 
     const response = await this.client.models.generateContent({
       model: this.MODEL_CODE,
       contents,
       config: {
-        temperature,
+        temperature: 0, // Always 0 for corrections
         systemInstruction,
       },
     });

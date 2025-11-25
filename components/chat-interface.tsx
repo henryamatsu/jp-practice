@@ -34,7 +34,13 @@ export function ChatInterface({
   const [initialized, setInitialized] = useState(false);
   const [actualTopic, setActualTopic] = useState<string>(topic);
   const [lastUserMessage, setLastUserMessage] = useState<string>("");
+  const [questionQueue, setQuestionQueue] = useState<string[]>([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [allQuestions, setAllQuestions] = useState<string[]>([]);
+  const [isReviewMode, setIsReviewMode] = useState(false);
+  const [reviewStartIndex, setReviewStartIndex] = useState(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const initializingRef = useRef(false); // Prevent double initialization in StrictMode
 
   // Get topic display name
   const getTopicName = () => {
@@ -53,37 +59,56 @@ export function ChatInterface({
 
   // Initialize chat with opening message from assistant
   useEffect(() => {
-    if (!initialized) {
+    if (!initialized && !initializingRef.current) {
       initializeChat();
     }
-  }, [initialized, topic, difficulty, useJapanese]);
+  }, [initialized]); // Only depend on initialized to prevent double calls
 
   const initializeChat = async () => {
+    // Prevent double initialization in React StrictMode
+    if (initializingRef.current) {
+      return;
+    }
+    initializingRef.current = true;
+
     setIsLoading(true);
     try {
-      const response = await fetch("/api/chat", {
+      // Generate first set of 5 questions
+      const questionsResponse = await fetch("/api/generate-questions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          messages: [],
           topic,
           difficulty,
           useJapanese,
-          isInitial: true,
         }),
       });
 
-      const data = await response.json();
-      if (data.message) {
-        setMessages([{ role: "assistant", content: data.message }]);
+      const questionsData = await questionsResponse.json();
+      if (questionsData.questions && questionsData.questions.length === 5) {
+        setQuestionQueue(questionsData.questions);
+        setAllQuestions(questionsData.questions);
+        setCurrentQuestionIndex(0);
+
+        // Set the actual topic if it was random
+        if (questionsData.actualTopic) {
+          setActualTopic(questionsData.actualTopic);
+        }
+
+        // Present the first question
+        setMessages([
+          {
+            role: "assistant",
+            content: `Let's begin! Here's your first question:\n\n${questionsData.questions[0]}`,
+          },
+        ]);
       }
-      if (data.actualTopic) {
-        setActualTopic(data.actualTopic);
-      }
+
       setInitialized(true);
     } catch (error) {
-      console.error("[v0] Failed to initialize chat:", error);
+      console.error("Failed to initialize chat:", error);
       setInitialized(true);
+      initializingRef.current = false; // Reset on error so it can be retried
     } finally {
       setIsLoading(false);
     }
@@ -91,7 +116,7 @@ export function ChatInterface({
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim() || isLoading) return;
+    if (!input.trim() || isLoading || questionQueue.length === 0) return;
 
     const userMessage = input.trim();
     setInput("");
@@ -104,28 +129,84 @@ export function ChatInterface({
     ];
     setMessages(updatedMessages);
 
-    // Keep only last 20 messages
-    const recentMessages = updatedMessages.slice(-20);
-
     setIsLoading(true);
     try {
+      // Get correction for current question and determine next question
+      const currentQuestion = questionQueue[currentQuestionIndex];
+      const nextIndex = currentQuestionIndex + 1;
+
+      let nextQuestion = "";
+      let willNeedNewQuestions = false;
+
+      if (nextIndex < questionQueue.length) {
+        // Next question from current queue
+        nextQuestion = questionQueue[nextIndex];
+      } else if (isReviewMode) {
+        // Will need to generate new questions after this
+        willNeedNewQuestions = true;
+        nextQuestion = "Please wait while we prepare new questions...";
+      } else {
+        // Will enter review mode after this
+        nextQuestion = `Review time! Let's practice these again:\n\n${questionQueue[0]}`;
+      }
+
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          messages: recentMessages,
-          topic: actualTopic, // Use the resolved topic, not the original "random"
-          difficulty,
+          messages: updatedMessages.slice(-6), // Keep last 3 exchanges for context
+          topic: actualTopic,
           useJapanese,
+          currentQuestion,
+          nextQuestion,
         }),
       });
 
       const data = await response.json();
+
       if (data.message) {
         setMessages((prev) => [
           ...prev,
           { role: "assistant", content: data.message },
         ]);
+
+        // Update state based on what happens next
+        if (nextIndex < questionQueue.length) {
+          // Move to next question in queue
+          setCurrentQuestionIndex(nextIndex);
+        } else if (willNeedNewQuestions) {
+          // Finished review, generate new questions
+          setIsReviewMode(false);
+          const questionsResponse = await fetch("/api/generate-questions", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              topic: actualTopic,
+              difficulty,
+              useJapanese,
+              previousQuestions: allQuestions,
+            }),
+          });
+
+          const questionsData = await questionsResponse.json();
+          if (questionsData.questions && questionsData.questions.length === 5) {
+            setQuestionQueue(questionsData.questions);
+            setAllQuestions([...allQuestions, ...questionsData.questions]);
+            setCurrentQuestionIndex(0);
+
+            // Update actualTopic if it changed (shouldn't normally, but just in case)
+            if (questionsData.actualTopic) {
+              setActualTopic(questionsData.actualTopic);
+            }
+          }
+        } else {
+          // Finished 5 new questions, enter review mode
+          setIsReviewMode(true);
+          const reviewQuestions = questionQueue; // The 5 questions we just completed
+          setQuestionQueue(reviewQuestions);
+          setReviewStartIndex(allQuestions.length - 5);
+          setCurrentQuestionIndex(0);
+        }
       } else {
         // Mark the last message as failed if no response
         setMessages((prev) => {
@@ -139,11 +220,12 @@ export function ChatInterface({
           return updated;
         });
       }
+
       if (data.actualTopic) {
         setActualTopic(data.actualTopic);
       }
     } catch (error) {
-      console.error("[v0] Failed to send message:", error);
+      console.error("Failed to send message:", error);
       // Mark the last message as failed
       setMessages((prev) => {
         const updated = [...prev];
@@ -161,7 +243,7 @@ export function ChatInterface({
   };
 
   const handleRetry = async () => {
-    if (!lastUserMessage || isLoading) return;
+    if (!lastUserMessage || isLoading || questionQueue.length === 0) return;
 
     // Remove the failed message if it exists
     setMessages((prev) => {
@@ -170,7 +252,13 @@ export function ChatInterface({
     });
 
     // Retry with the last user message
-    const recentMessages = messages.filter((msg) => !msg.failed).slice(-20);
+    const recentMessages = messages.filter((msg) => !msg.failed).slice(-6);
+    const currentQuestion = questionQueue[currentQuestionIndex];
+    const nextIndex = currentQuestionIndex + 1;
+    const nextQuestion =
+      nextIndex < questionQueue.length
+        ? questionQueue[nextIndex]
+        : questionQueue[0];
 
     setIsLoading(true);
     try {
@@ -180,8 +268,9 @@ export function ChatInterface({
         body: JSON.stringify({
           messages: recentMessages,
           topic: actualTopic,
-          difficulty,
           useJapanese,
+          currentQuestion,
+          nextQuestion,
         }),
       });
 
@@ -202,7 +291,7 @@ export function ChatInterface({
         setActualTopic(data.actualTopic);
       }
     } catch (error) {
-      console.error("[v0] Failed to retry message:", error);
+      console.error("Failed to retry message:", error);
       // Mark as failed again
       setMessages((prev) => [
         ...prev,

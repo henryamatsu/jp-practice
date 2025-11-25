@@ -266,7 +266,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 "[project]/lib/topics.json (json)", ((__turbopack_context__) => {
 
-__turbopack_context__.v(JSON.parse("{\"difficulties\":{\"elementary\":{\"name\":\"Elementary\",\"instruction\":\"ELEMENTARY SCHOOL LEVEL: Use only the most basic, everyday vocabulary that a young child would know. Keep ALL sentences very short (5-8 words maximum). Use only simple, single-clause sentences with basic subject-verb-object structure. Avoid any compound sentences, subordinate clauses, or complex constructions. Examples should be concrete and relate to immediate, tangible experiences (family, food, colors, animals, simple actions).\"},\"middle-school\":{\"name\":\"Middle School\",\"instruction\":\"MIDDLE SCHOOL LEVEL: Use common everyday vocabulary that a teenager would use. Sentences should be moderate length (8-12 words). You may use compound sentences with 2 clauses connected by simple conjunctions. Include more varied verb forms (te-form, potential form, basic conditionals). Grammar should include various tenses, polite and casual forms, and common sentence patterns. This is for learners with basic foundation.\"},\"high-school\":{\"name\":\"High School\",\"instruction\":\"HIGH SCHOOL LEVEL: Use a broader vocabulary including some less common words and idiomatic expressions. Sentences should be longer (12-18 words) and may contain multiple clauses with subordinate constructions. Include complex grammar patterns (causative, passive, conditional forms, relative clauses). Topics can be more abstract (opinions, hypotheticals, explanations of processes). This is for intermediate to advanced learners who understand complex sentence structures.\"},\"college\":{\"name\":\"College/Advanced\",\"instruction\":\"COLLEGE/ADVANCED LEVEL: Use sophisticated, nuanced vocabulary including formal expressions, literary language, and specialized terms. Sentences should be long and complex (18+ words) with multiple embedded clauses, relative clauses, and advanced grammatical constructions. Include honorific language, humble forms, and formal registers. Topics should be abstract and intellectually demanding (cultural analysis, philosophical concepts, formal discourse). This is for advanced learners who can handle native-level complexity.\"}},\"topics\":{\"basic-sentence-structure\":{\"name\":\"Basic Sentence Structure\",\"instruction\":\"Give English sentences with simple declarative statements and basic word order. Focus on subject-object-verb structure.\"},\"questions\":{\"name\":\"Asking and Answering Questions\",\"instruction\":\"Give English questions for the student to translate. Focus on question words, question particles, and proper question formation.\"},\"tenses\":{\"name\":\"Present, Past, and Future\",\"instruction\":\"Give Japanese sentences in one tense and ask the student to change them to a different tense (e.g., present to past, or past to future). Focus on verb conjugations, and focus on informal speech.\"},\"negation\":{\"name\":\"Negation\",\"instruction\":\"Give Japanese positive sentences and ask the student to make them negative, or give negative sentences and ask them to make them positive. Focus on negative verb and adjective forms.\"},\"modals\":{\"name\":\"Can, Should, Must, Want\",\"instruction\":\"Give English sentences using modal verbs (can, should, must, want to) for translation. Focus on expressing ability, obligation, and desire.\"},\"conditionals\":{\"name\":\"Conditionals (If/When)\",\"instruction\":\"Give English conditional sentences (if/when statements) for translation. Focus on conditional forms and their usage.\"},\"comparatives\":{\"name\":\"Comparatives\",\"instruction\":\"Give English sentences comparing things for translation. Focus on comparative structures and expressions.\"},\"possession\":{\"name\":\"Possession\",\"instruction\":\"Give English sentences about ownership and possession for translation. Focus on possessive particles and expressions.\"},\"self-introduction\":{\"name\":\"Self-Introduction\",\"instruction\":\"Give English sentences about introducing oneself (name, age, occupation, where you're from) for translation.\"},\"daily-routine\":{\"name\":\"Daily Routine\",\"instruction\":\"Give English sentences about everyday activities and habits for translation. Focus on time expressions and daily verbs.\"},\"food-and-restaurants\":{\"name\":\"Food & Restaurants\",\"instruction\":\"Give English sentences about food, eating, and restaurant situations for translation. Focus on food vocabulary and ordering phrases.\"},\"shopping-and-money\":{\"name\":\"Shopping & Money\",\"instruction\":\"Give English sentences about shopping, prices, and purchases for translation. Focus on numbers, counters, and shopping expressions.\"},\"directions-and-places\":{\"name\":\"Directions & Places in Town\",\"instruction\":\"Give English sentences about locations and directions for translation. Focus on location particles and direction vocabulary.\"},\"time-dates-schedules\":{\"name\":\"Time, Dates, and Schedules\",\"instruction\":\"Give English sentences about time, dates, and schedules for translation. Focus on time expressions and calendar vocabulary.\"},\"travel-situations\":{\"name\":\"Travel Situations\",\"instruction\":\"Give English sentences about travel, transportation, and accommodation for translation. Focus on travel-related vocabulary and phrases.\"},\"work-and-school\":{\"name\":\"Work & School\",\"instruction\":\"Give English sentences about work and school situations for translation. Focus on workplace and academic vocabulary.\"},\"weather-and-seasons\":{\"name\":\"Weather & Seasons\",\"instruction\":\"Give English sentences about weather and seasons for translation. Focus on weather vocabulary and seasonal expressions.\"},\"feelings-and-opinions\":{\"name\":\"Feelings & Opinions\",\"instruction\":\"Give English sentences expressing feelings and opinions for translation. Focus on emotion vocabulary and opinion expressions.\"},\"fill-in-the-blank\":{\"name\":\"Fill-in-the-Blank\",\"instruction\":\"Give Japanese sentences with a blank (___) where a word or particle is missing. Ask the student to provide the complete sentence with the correct word or particle filled in.\"},\"error-correction\":{\"name\":\"Error Correction\",\"instruction\":\"Give Japanese sentences that contain grammatical errors. Ask the student to identify and correct the mistakes.\"},\"politeness-levels\":{\"name\":\"Politeness Levels\",\"instruction\":\"Give Japanese sentences in casual form and ask the student to make them polite, or give polite sentences and ask them to make them casual.\"},\"requests\":{\"name\":\"Requests\",\"instruction\":\"Give English sentences making requests for translation. Focus on polite request forms.\"},\"softening-phrases\":{\"name\":\"Softening and Polite Phrasing\",\"instruction\":\"Give Japanese sentences that are direct or blunt, and ask the student to rephrase them to be softer and more polite.\"},\"name-suffixes\":{\"name\":\"Name Suffixes\",\"instruction\":\"Give English sentences with names and relationships, asking the student to translate using appropriate name suffixes.\"},\"particles-wa-ga\":{\"name\":\"Particles: WA and GA\",\"instruction\":\"Give Japanese sentences with a blank where wa or ga should go. Ask the student to fill in the correct particle and explain why.\"},\"particles-ni-de-e\":{\"name\":\"Particles: NI, DE, and E\",\"instruction\":\"Give Japanese sentences with a blank where ni, de, or e should go. Ask the student to fill in the correct particle and explain the usage.\"},\"basic-particles\":{\"name\":\"Basic Particles\",\"instruction\":\"Give Japanese sentences with blanks where particles (wo, mo, ka, etc.) should go. Ask the student to fill in the correct particles.\"},\"particles-from-to\":{\"name\":\"Particles: From and Until\",\"instruction\":\"Give Japanese sentences with blanks where kara or made should go. Ask the student to fill in the correct particle.\"},\"verb-groups\":{\"name\":\"Verb Groups\",\"instruction\":\"Give English sentences with various verbs for translation, focusing on correct verb group conjugations.\"},\"masu-form\":{\"name\":\"Polite Verb Forms\",\"instruction\":\"Give English sentences for translation using polite (masu/desu) verb forms.\"},\"past-tense\":{\"name\":\"Past Tense\",\"instruction\":\"Give English sentences in past tense for translation, focusing on past tense verb conjugations.\"},\"negative-forms\":{\"name\":\"Negative Forms\",\"instruction\":\"Give English negative sentences for translation, focusing on negative verb and adjective forms.\"},\"te-form-usage\":{\"name\":\"Te-form Usage\",\"instruction\":\"Give English sentences with connected actions or ongoing states for translation using te-form.\"},\"potential-form\":{\"name\":\"Potential Form\",\"instruction\":\"Give English sentences about ability (can/cannot do something) for translation using potential form.\"},\"volitional-form\":{\"name\":\"Volitional Form\",\"instruction\":\"Give English sentences about suggestions and intentions (let's do, I will do) for translation using volitional form.\"},\"numbers\":{\"name\":\"Numbers\",\"instruction\":\"Give English sentences with numbers and quantities for translation. Focus on number vocabulary and usage.\"},\"counters\":{\"name\":\"Counters\",\"instruction\":\"Give English sentences with quantities of specific items for translation, focusing on appropriate counters.\"},\"telling-time\":{\"name\":\"Telling Time\",\"instruction\":\"Give English sentences about time and schedules for translation. Focus on time expressions.\"},\"word-order\":{\"name\":\"Japanese Word Order\",\"instruction\":\"Give Japanese sentences with scrambled word order. Ask the student to rearrange the words into the correct, natural order.\"},\"demonstratives\":{\"name\":\"Demonstratives\",\"instruction\":\"Give English sentences with demonstratives (this, that, these, those) for translation using kore/sore/are/dore.\"},\"set-phrases\":{\"name\":\"Everyday Set Phrases\",\"instruction\":\"Give common situations in English and ask the student what Japanese set phrase would be appropriate (e.g., 'What do you say before eating?' → 'itadakimasu').\"},\"japanese-food\":{\"name\":\"Talking About Japanese Food\",\"instruction\":\"Give English sentences about Japanese food, meals, and eating habits for translation.\"},\"school-life-japan\":{\"name\":\"School Life in Japan\",\"instruction\":\"Give English sentences about school activities and experiences for translation using school-related vocabulary.\"},\"work-culture-japan\":{\"name\":\"Work Culture in Japan\",\"instruction\":\"Give English sentences about work situations and customs for translation using work-related vocabulary.\"},\"seasonal-events\":{\"name\":\"Seasonal Events in Japan\",\"instruction\":\"Give English sentences about seasonal events and traditions for translation.\"},\"hobbies\":{\"name\":\"Hobbies\",\"instruction\":\"Give English sentences about hobbies and leisure activities for translation.\"},\"trains-and-transport\":{\"name\":\"Trains and Public Transport\",\"instruction\":\"Give English sentences about using public transportation for translation.\"},\"agreeing-disagreeing\":{\"name\":\"Agreeing and Disagreeing Softly\",\"instruction\":\"Give English expressions of agreement or disagreement for translation using polite Japanese forms.\"},\"asking-for-clarification\":{\"name\":\"Asking for Clarification\",\"instruction\":\"Give English sentences asking for clarification or repetition for translation.\"}}}"));}),
+__turbopack_context__.v({"difficulties":{"elementary":{"name":"Elementary","instruction":"ELEMENTARY SCHOOL LEVEL: Use only the most basic, everyday vocabulary that a young child would know. Keep ALL sentences very short (5-8 words maximum). Use only simple, single-clause sentences with basic subject-verb-object structure. Avoid any compound sentences, subordinate clauses, or complex constructions. Examples should be concrete and relate to immediate, tangible experiences (family, food, colors, animals, simple actions)."},"middle-school":{"name":"Middle School","instruction":"MIDDLE SCHOOL LEVEL: Use common everyday vocabulary that a teenager would use. Sentences should be moderate length (8-12 words). You may use compound sentences with 2 clauses connected by simple conjunctions. Include more varied verb forms (te-form, potential form, basic conditionals). Grammar should include various tenses, polite and casual forms, and common sentence patterns. This is for learners with basic foundation."},"high-school":{"name":"High School","instruction":"HIGH SCHOOL LEVEL: Use a broader vocabulary including some less common words and idiomatic expressions. Sentences should be longer (12-18 words) and may contain multiple clauses with subordinate constructions. Include complex grammar patterns (causative, passive, conditional forms, relative clauses). Topics can be more abstract (opinions, hypotheticals, explanations of processes). This is for intermediate to advanced learners who understand complex sentence structures."},"college":{"name":"College/Advanced","instruction":"COLLEGE/ADVANCED LEVEL: Use sophisticated, nuanced vocabulary including formal expressions, literary language, and specialized terms. Sentences should be long and complex (18+ words) with multiple embedded clauses, relative clauses, and advanced grammatical constructions. Include honorific language, humble forms, and formal registers. Topics should be abstract and intellectually demanding (cultural analysis, philosophical concepts, formal discourse). This is for advanced learners who can handle native-level complexity."}},"topics":{"questions":{"name":"Asking and Answering Questions","instruction":"Give English questions for the student to translate. Focus on question words, question particles, and proper question formation."},"tenses":{"name":"Present, Past, and Future","instruction":"Give Japanese sentences in one tense and ask the student to change them to a different tense (e.g., present to past, or past to future). Focus on verb conjugations, and focus on informal speech."},"negation":{"name":"Negation","instruction":"Give Japanese positive sentences and ask the student to make them negative, or give negative sentences and ask them to make them positive. Focus on negative verb and adjective forms."},"modals":{"name":"Can, Should, Must, Want","instruction":"Give English sentences using modal verbs (can, should, must, want to) for translation. Focus on expressing ability, obligation, and desire."},"conditionals":{"name":"Conditionals (If/When)","instruction":"Give English conditional sentences (if/when statements) for translation. Focus on conditional forms and their usage."},"comparatives":{"name":"Comparatives","instruction":"Give English sentences comparing things for translation. Focus on comparative structures and expressions."},"possession":{"name":"Possession","instruction":"Give English sentences about ownership and possession for translation. Focus on possessive particles and expressions."},"self-introduction":{"name":"Self-Introduction","instruction":"Give English sentences about introducing oneself (name, age, occupation, where you're from) for translation."},"daily-routine":{"name":"Daily Routine","instruction":"Give English sentences about everyday activities and habits for translation. Focus on time expressions and daily verbs."},"food-and-restaurants":{"name":"Food & Restaurants","instruction":"Give English sentences about food, eating, and restaurant situations for translation. Focus on food vocabulary and ordering phrases."},"shopping-and-money":{"name":"Shopping & Money","instruction":"Give English sentences about shopping, prices, and purchases for translation. Focus on numbers, counters, and shopping expressions."},"directions-and-places":{"name":"Directions & Places in Town","instruction":"Give English sentences about locations and directions for translation. Focus on location particles and direction vocabulary."},"time-dates-schedules":{"name":"Time, Dates, and Schedules","instruction":"Give English sentences about time, dates, and schedules for translation. Focus on time expressions and calendar vocabulary."},"travel-situations":{"name":"Travel Situations","instruction":"Give English sentences about travel, transportation, and accommodation for translation. Focus on travel-related vocabulary and phrases."},"work-and-school":{"name":"Work & School","instruction":"Give English sentences about work and school situations for translation. Focus on workplace and academic vocabulary."},"weather-and-seasons":{"name":"Weather & Seasons","instruction":"Give English sentences about weather and seasons for translation. Focus on weather vocabulary and seasonal expressions."},"feelings-and-opinions":{"name":"Feelings & Opinions","instruction":"Give English sentences expressing feelings and opinions for translation. Focus on emotion vocabulary and opinion expressions."},"error-correction":{"name":"Error Correction","instruction":"Give Japanese sentences that contain grammatical errors. Ask the student to identify and correct the mistakes."},"politeness-levels":{"name":"Politeness Levels","instruction":"Give Japanese sentences in casual form and ask the student to make them polite, or give polite sentences and ask them to make them casual."},"requests":{"name":"Requests","instruction":"Give English sentences making requests for translation. Focus on polite request forms."},"softening-phrases":{"name":"Softening and Polite Phrasing","instruction":"Give Japanese sentences that are direct or blunt, and ask the student to rephrase them to be softer and more polite."},"particles-wa-ga":{"name":"Particles: WA and GA","instruction":"Give English sentences that will use wa or ga when translated to Japanese, and ask the student to translate them to Japanese using the correct particles."},"particles-ni-de-e":{"name":"Particles: NI, DE, and E","instruction":"Give English sentences that will use ni, de, or e when translated to Japanese, and ask the student to translate them to Japanese using the correct particles."},"verb-groups":{"name":"Verb Groups","instruction":"Give English sentences with various verbs for translation, focusing on correct verb group conjugations."},"past-tense":{"name":"Past Tense","instruction":"Give English sentences in past tense for translation, focusing on past tense verb conjugations."},"te-form-usage":{"name":"Te-form Usage","instruction":"Give English sentences with connected actions or ongoing states for translation using te-form."},"potential-form":{"name":"Potential Form","instruction":"Give English sentences about ability (can/cannot do something) for translation using potential form."},"volitional-form":{"name":"Volitional Form","instruction":"Give English sentences about suggestions and intentions (let's do, I will do) for translation using volitional form."},"numbers":{"name":"Numbers","instruction":"Give English sentences with numbers and quantities for translation. Focus on number vocabulary and usage."},"counters":{"name":"Counters","instruction":"Give English sentences with quantities of specific items for translation, focusing on appropriate counters."},"telling-time":{"name":"Telling Time","instruction":"Give English sentences about time and schedules for translation. Focus on time expressions."},"demonstratives":{"name":"Demonstratives","instruction":"Give English sentences with demonstratives (this, that, these, those) for translation using kore/sore/are/dore."},"set-phrases":{"name":"Everyday Set Phrases","instruction":"Give common situations in English and ask the student what Japanese set phrase would be appropriate (e.g., 'What do you say before eating?' → 'itadakimasu')."},"japanese-food":{"name":"Talking About Japanese Food","instruction":"Give English sentences about Japanese food, meals, and eating habits for translation."},"school-life-japan":{"name":"School Life in Japan","instruction":"Give English sentences about school activities and experiences for translation using school-related vocabulary."},"work-culture-japan":{"name":"Work Culture in Japan","instruction":"Give English sentences about work situations and customs for translation using work-related vocabulary."},"seasonal-events":{"name":"Seasonal Events in Japan","instruction":"Give English sentences about seasonal events and traditions for translation."},"hobbies":{"name":"Hobbies","instruction":"Give English sentences about hobbies and leisure activities for translation."},"trains-and-transport":{"name":"Trains and Public Transport","instruction":"Give English sentences about using public transportation for translation."},"agreeing-disagreeing":{"name":"Agreeing and Disagreeing Softly","instruction":"Give English expressions of agreement or disagreement for translation using polite Japanese forms."},"asking-for-clarification":{"name":"Asking for Clarification","instruction":"Give English sentences asking for clarification or repetition for translation."}}});}),
 "[project]/components/chat-interface.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -299,7 +299,13 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
     const [initialized, setInitialized] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [actualTopic, setActualTopic] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(topic);
     const [lastUserMessage, setLastUserMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [questionQueue, setQuestionQueue] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [allQuestions, setAllQuestions] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [isReviewMode, setIsReviewMode] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [reviewStartIndex, setReviewStartIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const messagesEndRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const initializingRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(false); // Prevent double initialization in StrictMode
     // Get topic display name
     const getTopicName = ()=>{
         const topicConfig = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$topics$2e$json__$28$json$29$__["default"].topics[actualTopic];
@@ -320,55 +326,62 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
     // Initialize chat with opening message from assistant
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "ChatInterface.useEffect": ()=>{
-            if (!initialized) {
+            if (!initialized && !initializingRef.current) {
                 initializeChat();
             }
         }
     }["ChatInterface.useEffect"], [
-        initialized,
-        topic,
-        difficulty,
-        useJapanese
-    ]);
+        initialized
+    ]); // Only depend on initialized to prevent double calls
     const initializeChat = async ()=>{
+        // Prevent double initialization in React StrictMode
+        if (initializingRef.current) {
+            return;
+        }
+        initializingRef.current = true;
         setIsLoading(true);
         try {
-            const response = await fetch("/api/chat", {
+            // Generate first set of 5 questions
+            const questionsResponse = await fetch("/api/generate-questions", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    messages: [],
                     topic,
                     difficulty,
-                    useJapanese,
-                    isInitial: true
+                    useJapanese
                 })
             });
-            const data = await response.json();
-            if (data.message) {
+            const questionsData = await questionsResponse.json();
+            if (questionsData.questions && questionsData.questions.length === 5) {
+                setQuestionQueue(questionsData.questions);
+                setAllQuestions(questionsData.questions);
+                setCurrentQuestionIndex(0);
+                // Set the actual topic if it was random
+                if (questionsData.actualTopic) {
+                    setActualTopic(questionsData.actualTopic);
+                }
+                // Present the first question
                 setMessages([
                     {
                         role: "assistant",
-                        content: data.message
+                        content: `Let's begin! Here's your first question:\n\n${questionsData.questions[0]}`
                     }
                 ]);
             }
-            if (data.actualTopic) {
-                setActualTopic(data.actualTopic);
-            }
             setInitialized(true);
         } catch (error) {
-            console.error("[v0] Failed to initialize chat:", error);
+            console.error("Failed to initialize chat:", error);
             setInitialized(true);
+            initializingRef.current = false; // Reset on error so it can be retried
         } finally{
             setIsLoading(false);
         }
     };
     const handleSendMessage = async (e)=>{
         e.preventDefault();
-        if (!input.trim() || isLoading) return;
+        if (!input.trim() || isLoading || questionQueue.length === 0) return;
         const userMessage = input.trim();
         setInput("");
         setLastUserMessage(userMessage);
@@ -381,20 +394,35 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
             }
         ];
         setMessages(updatedMessages);
-        // Keep only last 20 messages
-        const recentMessages = updatedMessages.slice(-20);
         setIsLoading(true);
         try {
+            // Get correction for current question and determine next question
+            const currentQuestion = questionQueue[currentQuestionIndex];
+            const nextIndex = currentQuestionIndex + 1;
+            let nextQuestion = "";
+            let willNeedNewQuestions = false;
+            if (nextIndex < questionQueue.length) {
+                // Next question from current queue
+                nextQuestion = questionQueue[nextIndex];
+            } else if (isReviewMode) {
+                // Will need to generate new questions after this
+                willNeedNewQuestions = true;
+                nextQuestion = "Please wait while we prepare new questions...";
+            } else {
+                // Will enter review mode after this
+                nextQuestion = `Review time! Let's practice these again:\n\n${questionQueue[0]}`;
+            }
             const response = await fetch("/api/chat", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    messages: recentMessages,
+                    messages: updatedMessages.slice(-6),
                     topic: actualTopic,
-                    difficulty,
-                    useJapanese
+                    useJapanese,
+                    currentQuestion,
+                    nextQuestion
                 })
             });
             const data = await response.json();
@@ -406,6 +434,46 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                             content: data.message
                         }
                     ]);
+                // Update state based on what happens next
+                if (nextIndex < questionQueue.length) {
+                    // Move to next question in queue
+                    setCurrentQuestionIndex(nextIndex);
+                } else if (willNeedNewQuestions) {
+                    // Finished review, generate new questions
+                    setIsReviewMode(false);
+                    const questionsResponse = await fetch("/api/generate-questions", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            topic: actualTopic,
+                            difficulty,
+                            useJapanese,
+                            previousQuestions: allQuestions
+                        })
+                    });
+                    const questionsData = await questionsResponse.json();
+                    if (questionsData.questions && questionsData.questions.length === 5) {
+                        setQuestionQueue(questionsData.questions);
+                        setAllQuestions([
+                            ...allQuestions,
+                            ...questionsData.questions
+                        ]);
+                        setCurrentQuestionIndex(0);
+                        // Update actualTopic if it changed (shouldn't normally, but just in case)
+                        if (questionsData.actualTopic) {
+                            setActualTopic(questionsData.actualTopic);
+                        }
+                    }
+                } else {
+                    // Finished 5 new questions, enter review mode
+                    setIsReviewMode(true);
+                    const reviewQuestions = questionQueue; // The 5 questions we just completed
+                    setQuestionQueue(reviewQuestions);
+                    setReviewStartIndex(allQuestions.length - 5);
+                    setCurrentQuestionIndex(0);
+                }
             } else {
                 // Mark the last message as failed if no response
                 setMessages((prev)=>{
@@ -425,7 +493,7 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                 setActualTopic(data.actualTopic);
             }
         } catch (error) {
-            console.error("[v0] Failed to send message:", error);
+            console.error("Failed to send message:", error);
             // Mark the last message as failed
             setMessages((prev)=>{
                 const updated = [
@@ -444,14 +512,17 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
         }
     };
     const handleRetry = async ()=>{
-        if (!lastUserMessage || isLoading) return;
+        if (!lastUserMessage || isLoading || questionQueue.length === 0) return;
         // Remove the failed message if it exists
         setMessages((prev)=>{
             const filtered = prev.filter((msg)=>!msg.failed);
             return filtered;
         });
         // Retry with the last user message
-        const recentMessages = messages.filter((msg)=>!msg.failed).slice(-20);
+        const recentMessages = messages.filter((msg)=>!msg.failed).slice(-6);
+        const currentQuestion = questionQueue[currentQuestionIndex];
+        const nextIndex = currentQuestionIndex + 1;
+        const nextQuestion = nextIndex < questionQueue.length ? questionQueue[nextIndex] : questionQueue[0];
         setIsLoading(true);
         try {
             const response = await fetch("/api/chat", {
@@ -462,8 +533,9 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                 body: JSON.stringify({
                     messages: recentMessages,
                     topic: actualTopic,
-                    difficulty,
-                    useJapanese
+                    useJapanese,
+                    currentQuestion,
+                    nextQuestion
                 })
             });
             const data = await response.json();
@@ -490,7 +562,7 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                 setActualTopic(data.actualTopic);
             }
         } catch (error) {
-            console.error("[v0] Failed to retry message:", error);
+            console.error("Failed to retry message:", error);
             // Mark as failed again
             setMessages((prev)=>[
                     ...prev,
@@ -517,7 +589,7 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                             children: "Japanese Learner"
                         }, void 0, false, {
                             fileName: "[project]/components/chat-interface.tsx",
-                            lineNumber: 221,
+                            lineNumber: 310,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -525,18 +597,18 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                             children: getTopicName()
                         }, void 0, false, {
                             fileName: "[project]/components/chat-interface.tsx",
-                            lineNumber: 222,
+                            lineNumber: 311,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/chat-interface.tsx",
-                    lineNumber: 220,
+                    lineNumber: 309,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/chat-interface.tsx",
-                lineNumber: 219,
+                lineNumber: 308,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -547,20 +619,20 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                         isLoading: isLoading
                     }, void 0, false, {
                         fileName: "[project]/components/chat-interface.tsx",
-                        lineNumber: 230,
+                        lineNumber: 319,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         ref: messagesEndRef
                     }, void 0, false, {
                         fileName: "[project]/components/chat-interface.tsx",
-                        lineNumber: 231,
+                        lineNumber: 320,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/chat-interface.tsx",
-                lineNumber: 229,
+                lineNumber: 318,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -575,7 +647,7 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                                     children: "Failed to get response"
                                 }, void 0, false, {
                                     fileName: "[project]/components/chat-interface.tsx",
-                                    lineNumber: 239,
+                                    lineNumber: 328,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -589,20 +661,20 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                                             className: "w-3 h-3"
                                         }, void 0, false, {
                                             fileName: "[project]/components/chat-interface.tsx",
-                                            lineNumber: 247,
+                                            lineNumber: 336,
                                             columnNumber: 17
                                         }, this),
                                         "Retry"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/chat-interface.tsx",
-                                    lineNumber: 240,
+                                    lineNumber: 329,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/chat-interface.tsx",
-                            lineNumber: 238,
+                            lineNumber: 327,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$message$2d$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MessageInput"], {
@@ -612,7 +684,7 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                             isLoading: isLoading
                         }, void 0, false, {
                             fileName: "[project]/components/chat-interface.tsx",
-                            lineNumber: 252,
+                            lineNumber: 341,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -625,41 +697,41 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/components/chat-interface.tsx",
-                                    lineNumber: 264,
+                                    lineNumber: 353,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "Start New Session"
                                 }, void 0, false, {
                                     fileName: "[project]/components/chat-interface.tsx",
-                                    lineNumber: 265,
+                                    lineNumber: 354,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/chat-interface.tsx",
-                            lineNumber: 258,
+                            lineNumber: 347,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/chat-interface.tsx",
-                    lineNumber: 236,
+                    lineNumber: 325,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/chat-interface.tsx",
-                lineNumber: 235,
+                lineNumber: 324,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/chat-interface.tsx",
-        lineNumber: 217,
+        lineNumber: 306,
         columnNumber: 5
     }, this);
 }
-_s(ChatInterface, "ZBSvR7PGgms4LWzg1b2bTRHLfik=");
+_s(ChatInterface, "bKPhkoOgW1aiGPz4/38s2crHfAI=");
 _c = ChatInterface;
 var _c;
 __turbopack_context__.k.register(_c, "ChatInterface");

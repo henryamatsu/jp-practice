@@ -18,10 +18,6 @@
     }
   },
   "topics": {
-    "basic-sentence-structure": {
-      "name": "Basic Sentence Structure",
-      "instruction": "Give English sentences with simple declarative statements and basic word order. Focus on subject-object-verb structure."
-    },
     "questions": {
       "name": "Asking and Answering Questions",
       "instruction": "Give English questions for the student to translate. Focus on question words, question particles, and proper question formation."
@@ -90,10 +86,6 @@
       "name": "Feelings & Opinions",
       "instruction": "Give English sentences expressing feelings and opinions for translation. Focus on emotion vocabulary and opinion expressions."
     },
-    "fill-in-the-blank": {
-      "name": "Fill-in-the-Blank",
-      "instruction": "Give Japanese sentences with a blank (___) where a word or particle is missing. Ask the student to provide the complete sentence with the correct word or particle filled in."
-    },
     "error-correction": {
       "name": "Error Correction",
       "instruction": "Give Japanese sentences that contain grammatical errors. Ask the student to identify and correct the mistakes."
@@ -110,41 +102,21 @@
       "name": "Softening and Polite Phrasing",
       "instruction": "Give Japanese sentences that are direct or blunt, and ask the student to rephrase them to be softer and more polite."
     },
-    "name-suffixes": {
-      "name": "Name Suffixes",
-      "instruction": "Give English sentences with names and relationships, asking the student to translate using appropriate name suffixes."
-    },
     "particles-wa-ga": {
       "name": "Particles: WA and GA",
-      "instruction": "Give Japanese sentences with a blank where wa or ga should go. Ask the student to fill in the correct particle and explain why."
+      "instruction": "Give English sentences that will use wa or ga when translated to Japanese, and ask the student to translate them to Japanese using the correct particles."
     },
     "particles-ni-de-e": {
       "name": "Particles: NI, DE, and E",
-      "instruction": "Give Japanese sentences with a blank where ni, de, or e should go. Ask the student to fill in the correct particle and explain the usage."
-    },
-    "basic-particles": {
-      "name": "Basic Particles",
-      "instruction": "Give Japanese sentences with blanks where particles (wo, mo, ka, etc.) should go. Ask the student to fill in the correct particles."
-    },
-    "particles-from-to": {
-      "name": "Particles: From and Until",
-      "instruction": "Give Japanese sentences with blanks where kara or made should go. Ask the student to fill in the correct particle."
+      "instruction": "Give English sentences that will use ni, de, or e when translated to Japanese, and ask the student to translate them to Japanese using the correct particles."
     },
     "verb-groups": {
       "name": "Verb Groups",
       "instruction": "Give English sentences with various verbs for translation, focusing on correct verb group conjugations."
     },
-    "masu-form": {
-      "name": "Polite Verb Forms",
-      "instruction": "Give English sentences for translation using polite (masu/desu) verb forms."
-    },
     "past-tense": {
       "name": "Past Tense",
       "instruction": "Give English sentences in past tense for translation, focusing on past tense verb conjugations."
-    },
-    "negative-forms": {
-      "name": "Negative Forms",
-      "instruction": "Give English negative sentences for translation, focusing on negative verb and adjective forms."
     },
     "te-form-usage": {
       "name": "Te-form Usage",

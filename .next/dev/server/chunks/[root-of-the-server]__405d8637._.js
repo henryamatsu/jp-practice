@@ -419,7 +419,7 @@ class GeminiEngine {
 }
 const geminiEngine = new GeminiEngine();
 }),
-"[project]/app/api/chat/route.ts [app-route] (ecmascript)", ((__turbopack_context__) => {
+"[project]/app/api/generate-questions/route.ts [app-route] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -431,16 +431,16 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$gemini$2d$engine$2e$t
 async function POST(request) {
     try {
         const body = await request.json();
-        const { messages, topic, difficulty, useJapanese, currentQuestion } = body;
-        const { text, actualTopic } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$gemini$2d$engine$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["geminiEngine"].generateResponse(messages, topic, difficulty, useJapanese, currentQuestion);
+        const { topic, difficulty, useJapanese, previousQuestions } = body;
+        const { questions, actualTopic } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$gemini$2d$engine$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["geminiEngine"].generateQuestions(topic, difficulty, useJapanese, previousQuestions);
         return Response.json({
-            message: text,
+            questions,
             actualTopic
         });
     } catch (error) {
-        console.error("Chat API error:", error);
+        console.error("Question generation API error:", error);
         return Response.json({
-            error: "Failed to generate response"
+            error: "Failed to generate questions"
         }, {
             status: 500
         });
@@ -449,4 +449,4 @@ async function POST(request) {
 }),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__27ff9692._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__405d8637._.js.map

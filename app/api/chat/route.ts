@@ -3,22 +3,23 @@ import { geminiEngine } from "@/lib/gemini-engine";
 interface RequestBody {
   messages: Array<{ role: "user" | "assistant"; content: string }>;
   topic: string;
-  difficulty: string;
   useJapanese: boolean;
-  isInitial?: boolean;
+  currentQuestion: string;
+  nextQuestion: string;
 }
 
 export async function POST(request: Request) {
   try {
     const body: RequestBody = await request.json();
-    const { messages, topic, difficulty, useJapanese, isInitial } = body;
+    const { messages, topic, useJapanese, currentQuestion, nextQuestion } =
+      body;
 
     const { text, actualTopic } = await geminiEngine.generateResponse(
       messages,
       topic,
-      difficulty,
       useJapanese,
-      isInitial
+      currentQuestion,
+      nextQuestion
     );
 
     return Response.json({ message: text, actualTopic });
