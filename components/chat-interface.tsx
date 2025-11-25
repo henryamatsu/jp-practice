@@ -217,21 +217,12 @@ export function ChatInterface({
     <div className="h-full w-full max-w-full flex flex-col bg-background overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-border sticky top-0 bg-background/95 backdrop-blur shrink-0">
-        <div className="flex flex-col min-w-0 flex-1 mr-2">
+        <div className="flex flex-col min-w-0 flex-1">
           <h2 className="text-lg font-semibold truncate">Japanese Learner</h2>
           <p className="text-sm text-muted-foreground truncate">
             {getTopicName()}
           </p>
         </div>
-        <Button
-          onClick={onRefresh}
-          variant="outline"
-          size="sm"
-          className="gap-2 bg-transparent shrink-0"
-        >
-          <RotateCcw className="w-4 h-4" />
-          <span className="hidden sm:inline">Refresh</span>
-        </Button>
       </div>
 
       {/* Messages */}
@@ -264,6 +255,15 @@ export function ChatInterface({
             onSubmit={handleSendMessage}
             isLoading={isLoading}
           />
+          <Button
+            onClick={onRefresh}
+            variant="outline"
+            size="sm"
+            className="gap-2 w-full"
+          >
+            <RotateCcw className="w-4 h-4" />
+            <span>Start New Session</span>
+          </Button>
         </div>
       </div>
     </div>

@@ -190,7 +190,7 @@ function MessageInput({ input, setInput, onSubmit, isLoading }) {
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
         onSubmit: onSubmit,
-        className: "flex gap-2 w-full",
+        className: "flex flex-col sm:flex-row gap-2 w-full",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
                 value: input,
@@ -199,7 +199,10 @@ function MessageInput({ input, setInput, onSubmit, isLoading }) {
                 placeholder: "Type your message... (Shift+Enter for new line)",
                 className: "flex-1 min-w-0 bg-background border border-input rounded-lg px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary max-h-24",
                 rows: 1,
-                disabled: isLoading
+                disabled: isLoading,
+                style: {
+                    fontSize: '16px'
+                }
             }, void 0, false, {
                 fileName: "[project]/components/message-input.tsx",
                 lineNumber: 25,
@@ -209,17 +212,27 @@ function MessageInput({ input, setInput, onSubmit, isLoading }) {
                 type: "submit",
                 disabled: isLoading || !input.trim(),
                 size: "sm",
-                className: "gap-2 shrink-0",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"], {
-                    className: "w-4 h-4"
-                }, void 0, false, {
-                    fileName: "[project]/components/message-input.tsx",
-                    lineNumber: 35,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                className: "gap-2 shrink-0 w-full sm:w-auto",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"], {
+                        className: "w-4 h-4"
+                    }, void 0, false, {
+                        fileName: "[project]/components/message-input.tsx",
+                        lineNumber: 36,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "sm:hidden",
+                        children: "Send"
+                    }, void 0, false, {
+                        fileName: "[project]/components/message-input.tsx",
+                        lineNumber: 37,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/components/message-input.tsx",
-                lineNumber: 34,
+                lineNumber: 35,
                 columnNumber: 7
             }, this)
         ]
@@ -232,7 +245,7 @@ function MessageInput({ input, setInput, onSubmit, isLoading }) {
 }),
 "[project]/lib/topics.json (json)", ((__turbopack_context__) => {
 
-__turbopack_context__.v({"difficulties":{"elementary":{"name":"Elementary","instruction":"Use very simple vocabulary and basic sentence structures. Explain concepts in a beginner-friendly way. Use hiragana with furigana support. Keep sentences short and clear."},"middle-school":{"name":"Middle School","instruction":"Use intermediate vocabulary and more complex sentence patterns. Introduce common kanji with readings. Provide explanations that assume some foundational knowledge."},"high-school":{"name":"High School","instruction":"Use advanced vocabulary and complex grammar structures. Include more kanji and idiomatic expressions. Assume solid understanding of basic concepts."},"college":{"name":"College/Advanced","instruction":"Use sophisticated vocabulary and nuanced expressions. Include formal language, literary forms, and complex kanji. Engage with abstract concepts and cultural nuances."}},"topics":{"basic-sentence-structure":{"name":"Basic Sentence Structure","instruction":"Give English sentences with simple declarative statements and basic word order. Focus on subject-object-verb structure."},"questions":{"name":"Asking and Answering Questions","instruction":"Give English questions for the student to translate. Focus on question words, question particles, and proper question formation."},"tenses":{"name":"Present, Past, and Future","instruction":"Give Japanese sentences in one tense and ask the student to change them to a different tense (e.g., present to past, or past to future). Focus on verb conjugations."},"negation":{"name":"Negation","instruction":"Give Japanese positive sentences and ask the student to make them negative, or give negative sentences and ask them to make them positive. Focus on negative verb and adjective forms."},"modals":{"name":"Can, Should, Must, Want","instruction":"Give English sentences using modal verbs (can, should, must, want to) for translation. Focus on expressing ability, obligation, and desire."},"conditionals":{"name":"Conditionals (If/When)","instruction":"Give English conditional sentences (if/when statements) for translation. Focus on conditional forms and their usage."},"comparatives":{"name":"Comparatives","instruction":"Give English sentences comparing things for translation. Focus on comparative structures and expressions."},"possession":{"name":"Possession","instruction":"Give English sentences about ownership and possession for translation. Focus on possessive particles and expressions."},"self-introduction":{"name":"Self-Introduction","instruction":"Give English sentences about introducing oneself (name, age, occupation, where you're from) for translation."},"daily-routine":{"name":"Daily Routine","instruction":"Give English sentences about everyday activities and habits for translation. Focus on time expressions and daily verbs."},"food-and-restaurants":{"name":"Food & Restaurants","instruction":"Give English sentences about food, eating, and restaurant situations for translation. Focus on food vocabulary and ordering phrases."},"shopping-and-money":{"name":"Shopping & Money","instruction":"Give English sentences about shopping, prices, and purchases for translation. Focus on numbers, counters, and shopping expressions."},"directions-and-places":{"name":"Directions & Places in Town","instruction":"Give English sentences about locations and directions for translation. Focus on location particles and direction vocabulary."},"time-dates-schedules":{"name":"Time, Dates, and Schedules","instruction":"Give English sentences about time, dates, and schedules for translation. Focus on time expressions and calendar vocabulary."},"travel-situations":{"name":"Travel Situations","instruction":"Give English sentences about travel, transportation, and accommodation for translation. Focus on travel-related vocabulary and phrases."},"work-and-school":{"name":"Work & School","instruction":"Give English sentences about work and school situations for translation. Focus on workplace and academic vocabulary."},"weather-and-seasons":{"name":"Weather & Seasons","instruction":"Give English sentences about weather and seasons for translation. Focus on weather vocabulary and seasonal expressions."},"feelings-and-opinions":{"name":"Feelings & Opinions","instruction":"Give English sentences expressing feelings and opinions for translation. Focus on emotion vocabulary and opinion expressions."},"fill-in-the-blank":{"name":"Fill-in-the-Blank","instruction":"Give Japanese sentences with a blank (___) where a word or particle is missing. Ask the student to provide the complete sentence with the correct word or particle filled in."},"error-correction":{"name":"Error Correction","instruction":"Give Japanese sentences that contain grammatical errors. Ask the student to identify and correct the mistakes."},"politeness-levels":{"name":"Politeness Levels","instruction":"Give Japanese sentences in casual form and ask the student to make them polite, or give polite sentences and ask them to make them casual."},"requests":{"name":"Requests","instruction":"Give English sentences making requests for translation. Focus on polite request forms."},"softening-phrases":{"name":"Softening and Polite Phrasing","instruction":"Give Japanese sentences that are direct or blunt, and ask the student to rephrase them to be softer and more polite."},"name-suffixes":{"name":"Name Suffixes","instruction":"Give English sentences with names and relationships, asking the student to translate using appropriate name suffixes."},"particles-wa-ga":{"name":"Particles: WA and GA","instruction":"Give Japanese sentences with a blank where wa or ga should go. Ask the student to fill in the correct particle and explain why."},"particles-ni-de-e":{"name":"Particles: NI, DE, and E","instruction":"Give Japanese sentences with a blank where ni, de, or e should go. Ask the student to fill in the correct particle and explain the usage."},"basic-particles":{"name":"Basic Particles","instruction":"Give Japanese sentences with blanks where particles (wo, mo, ka, etc.) should go. Ask the student to fill in the correct particles."},"particles-from-to":{"name":"Particles: From and Until","instruction":"Give Japanese sentences with blanks where kara or made should go. Ask the student to fill in the correct particle."},"verb-groups":{"name":"Verb Groups","instruction":"Give English sentences with various verbs for translation, focusing on correct verb group conjugations."},"masu-form":{"name":"Polite Verb Forms","instruction":"Give English sentences for translation using polite (masu/desu) verb forms."},"past-tense":{"name":"Past Tense","instruction":"Give English sentences in past tense for translation, focusing on past tense verb conjugations."},"negative-forms":{"name":"Negative Forms","instruction":"Give English negative sentences for translation, focusing on negative verb and adjective forms."},"te-form-usage":{"name":"Te-form Usage","instruction":"Give English sentences with connected actions or ongoing states for translation using te-form."},"potential-form":{"name":"Potential Form","instruction":"Give English sentences about ability (can/cannot do something) for translation using potential form."},"volitional-form":{"name":"Volitional Form","instruction":"Give English sentences about suggestions and intentions (let's do, I will do) for translation using volitional form."},"numbers":{"name":"Numbers","instruction":"Give English sentences with numbers and quantities for translation. Focus on number vocabulary and usage."},"counters":{"name":"Counters","instruction":"Give English sentences with quantities of specific items for translation, focusing on appropriate counters."},"telling-time":{"name":"Telling Time","instruction":"Give English sentences about time and schedules for translation. Focus on time expressions."},"word-order":{"name":"Japanese Word Order","instruction":"Give Japanese sentences with scrambled word order. Ask the student to rearrange the words into the correct, natural order."},"dropping-pronouns":{"name":"Dropping Pronouns","instruction":"Give Japanese sentences with unnecessary pronouns. Ask the student to rewrite them more naturally by omitting the pronouns where appropriate."},"demonstratives":{"name":"Demonstratives","instruction":"Give English sentences with demonstratives (this, that, these, those) for translation using kore/sore/are/dore."},"set-phrases":{"name":"Everyday Set Phrases","instruction":"Give common situations in English and ask the student what Japanese set phrase would be appropriate (e.g., 'What do you say before eating?' → 'itadakimasu')."},"japanese-food":{"name":"Talking About Japanese Food","instruction":"Give English sentences about Japanese food, meals, and eating habits for translation."},"school-life-japan":{"name":"School Life in Japan","instruction":"Give English sentences about school activities and experiences for translation using school-related vocabulary."},"work-culture-japan":{"name":"Work Culture in Japan","instruction":"Give English sentences about work situations and customs for translation using work-related vocabulary."},"seasonal-events":{"name":"Seasonal Events in Japan","instruction":"Give English sentences about seasonal events and traditions for translation."},"hobbies":{"name":"Hobbies","instruction":"Give English sentences about hobbies and leisure activities for translation."},"trains-and-transport":{"name":"Trains and Public Transport","instruction":"Give English sentences about using public transportation for translation."},"agreeing-disagreeing":{"name":"Agreeing and Disagreeing Softly","instruction":"Give English expressions of agreement or disagreement for translation using polite Japanese forms."},"asking-for-clarification":{"name":"Asking for Clarification","instruction":"Give English sentences asking for clarification or repetition for translation."}}});}),
+__turbopack_context__.v(JSON.parse("{\"difficulties\":{\"elementary\":{\"name\":\"Elementary\",\"instruction\":\"ELEMENTARY SCHOOL LEVEL: Use only the most basic, everyday vocabulary that a young child would know. Keep ALL sentences very short (5-8 words maximum). Use only simple, single-clause sentences with basic subject-verb-object structure. Avoid any compound sentences, subordinate clauses, or complex constructions. Examples should be concrete and relate to immediate, tangible experiences (family, food, colors, animals, simple actions).\"},\"middle-school\":{\"name\":\"Middle School\",\"instruction\":\"MIDDLE SCHOOL LEVEL: Use common everyday vocabulary that a teenager would use. Sentences should be moderate length (8-12 words). You may use compound sentences with 2 clauses connected by simple conjunctions. Include more varied verb forms (te-form, potential form, basic conditionals). Grammar should include various tenses, polite and casual forms, and common sentence patterns. This is for learners with basic foundation.\"},\"high-school\":{\"name\":\"High School\",\"instruction\":\"HIGH SCHOOL LEVEL: Use a broader vocabulary including some less common words and idiomatic expressions. Sentences should be longer (12-18 words) and may contain multiple clauses with subordinate constructions. Include complex grammar patterns (causative, passive, conditional forms, relative clauses). Topics can be more abstract (opinions, hypotheticals, explanations of processes). This is for intermediate to advanced learners who understand complex sentence structures.\"},\"college\":{\"name\":\"College/Advanced\",\"instruction\":\"COLLEGE/ADVANCED LEVEL: Use sophisticated, nuanced vocabulary including formal expressions, literary language, and specialized terms. Sentences should be long and complex (18+ words) with multiple embedded clauses, relative clauses, and advanced grammatical constructions. Include honorific language, humble forms, and formal registers. Topics should be abstract and intellectually demanding (cultural analysis, philosophical concepts, formal discourse). This is for advanced learners who can handle native-level complexity.\"}},\"topics\":{\"basic-sentence-structure\":{\"name\":\"Basic Sentence Structure\",\"instruction\":\"Give English sentences with simple declarative statements and basic word order. Focus on subject-object-verb structure.\"},\"questions\":{\"name\":\"Asking and Answering Questions\",\"instruction\":\"Give English questions for the student to translate. Focus on question words, question particles, and proper question formation.\"},\"tenses\":{\"name\":\"Present, Past, and Future\",\"instruction\":\"Give Japanese sentences in one tense and ask the student to change them to a different tense (e.g., present to past, or past to future). Focus on verb conjugations, and focus on informal speech.\"},\"negation\":{\"name\":\"Negation\",\"instruction\":\"Give Japanese positive sentences and ask the student to make them negative, or give negative sentences and ask them to make them positive. Focus on negative verb and adjective forms.\"},\"modals\":{\"name\":\"Can, Should, Must, Want\",\"instruction\":\"Give English sentences using modal verbs (can, should, must, want to) for translation. Focus on expressing ability, obligation, and desire.\"},\"conditionals\":{\"name\":\"Conditionals (If/When)\",\"instruction\":\"Give English conditional sentences (if/when statements) for translation. Focus on conditional forms and their usage.\"},\"comparatives\":{\"name\":\"Comparatives\",\"instruction\":\"Give English sentences comparing things for translation. Focus on comparative structures and expressions.\"},\"possession\":{\"name\":\"Possession\",\"instruction\":\"Give English sentences about ownership and possession for translation. Focus on possessive particles and expressions.\"},\"self-introduction\":{\"name\":\"Self-Introduction\",\"instruction\":\"Give English sentences about introducing oneself (name, age, occupation, where you're from) for translation.\"},\"daily-routine\":{\"name\":\"Daily Routine\",\"instruction\":\"Give English sentences about everyday activities and habits for translation. Focus on time expressions and daily verbs.\"},\"food-and-restaurants\":{\"name\":\"Food & Restaurants\",\"instruction\":\"Give English sentences about food, eating, and restaurant situations for translation. Focus on food vocabulary and ordering phrases.\"},\"shopping-and-money\":{\"name\":\"Shopping & Money\",\"instruction\":\"Give English sentences about shopping, prices, and purchases for translation. Focus on numbers, counters, and shopping expressions.\"},\"directions-and-places\":{\"name\":\"Directions & Places in Town\",\"instruction\":\"Give English sentences about locations and directions for translation. Focus on location particles and direction vocabulary.\"},\"time-dates-schedules\":{\"name\":\"Time, Dates, and Schedules\",\"instruction\":\"Give English sentences about time, dates, and schedules for translation. Focus on time expressions and calendar vocabulary.\"},\"travel-situations\":{\"name\":\"Travel Situations\",\"instruction\":\"Give English sentences about travel, transportation, and accommodation for translation. Focus on travel-related vocabulary and phrases.\"},\"work-and-school\":{\"name\":\"Work & School\",\"instruction\":\"Give English sentences about work and school situations for translation. Focus on workplace and academic vocabulary.\"},\"weather-and-seasons\":{\"name\":\"Weather & Seasons\",\"instruction\":\"Give English sentences about weather and seasons for translation. Focus on weather vocabulary and seasonal expressions.\"},\"feelings-and-opinions\":{\"name\":\"Feelings & Opinions\",\"instruction\":\"Give English sentences expressing feelings and opinions for translation. Focus on emotion vocabulary and opinion expressions.\"},\"fill-in-the-blank\":{\"name\":\"Fill-in-the-Blank\",\"instruction\":\"Give Japanese sentences with a blank (___) where a word or particle is missing. Ask the student to provide the complete sentence with the correct word or particle filled in.\"},\"error-correction\":{\"name\":\"Error Correction\",\"instruction\":\"Give Japanese sentences that contain grammatical errors. Ask the student to identify and correct the mistakes.\"},\"politeness-levels\":{\"name\":\"Politeness Levels\",\"instruction\":\"Give Japanese sentences in casual form and ask the student to make them polite, or give polite sentences and ask them to make them casual.\"},\"requests\":{\"name\":\"Requests\",\"instruction\":\"Give English sentences making requests for translation. Focus on polite request forms.\"},\"softening-phrases\":{\"name\":\"Softening and Polite Phrasing\",\"instruction\":\"Give Japanese sentences that are direct or blunt, and ask the student to rephrase them to be softer and more polite.\"},\"name-suffixes\":{\"name\":\"Name Suffixes\",\"instruction\":\"Give English sentences with names and relationships, asking the student to translate using appropriate name suffixes.\"},\"particles-wa-ga\":{\"name\":\"Particles: WA and GA\",\"instruction\":\"Give Japanese sentences with a blank where wa or ga should go. Ask the student to fill in the correct particle and explain why.\"},\"particles-ni-de-e\":{\"name\":\"Particles: NI, DE, and E\",\"instruction\":\"Give Japanese sentences with a blank where ni, de, or e should go. Ask the student to fill in the correct particle and explain the usage.\"},\"basic-particles\":{\"name\":\"Basic Particles\",\"instruction\":\"Give Japanese sentences with blanks where particles (wo, mo, ka, etc.) should go. Ask the student to fill in the correct particles.\"},\"particles-from-to\":{\"name\":\"Particles: From and Until\",\"instruction\":\"Give Japanese sentences with blanks where kara or made should go. Ask the student to fill in the correct particle.\"},\"verb-groups\":{\"name\":\"Verb Groups\",\"instruction\":\"Give English sentences with various verbs for translation, focusing on correct verb group conjugations.\"},\"masu-form\":{\"name\":\"Polite Verb Forms\",\"instruction\":\"Give English sentences for translation using polite (masu/desu) verb forms.\"},\"past-tense\":{\"name\":\"Past Tense\",\"instruction\":\"Give English sentences in past tense for translation, focusing on past tense verb conjugations.\"},\"negative-forms\":{\"name\":\"Negative Forms\",\"instruction\":\"Give English negative sentences for translation, focusing on negative verb and adjective forms.\"},\"te-form-usage\":{\"name\":\"Te-form Usage\",\"instruction\":\"Give English sentences with connected actions or ongoing states for translation using te-form.\"},\"potential-form\":{\"name\":\"Potential Form\",\"instruction\":\"Give English sentences about ability (can/cannot do something) for translation using potential form.\"},\"volitional-form\":{\"name\":\"Volitional Form\",\"instruction\":\"Give English sentences about suggestions and intentions (let's do, I will do) for translation using volitional form.\"},\"numbers\":{\"name\":\"Numbers\",\"instruction\":\"Give English sentences with numbers and quantities for translation. Focus on number vocabulary and usage.\"},\"counters\":{\"name\":\"Counters\",\"instruction\":\"Give English sentences with quantities of specific items for translation, focusing on appropriate counters.\"},\"telling-time\":{\"name\":\"Telling Time\",\"instruction\":\"Give English sentences about time and schedules for translation. Focus on time expressions.\"},\"word-order\":{\"name\":\"Japanese Word Order\",\"instruction\":\"Give Japanese sentences with scrambled word order. Ask the student to rearrange the words into the correct, natural order.\"},\"demonstratives\":{\"name\":\"Demonstratives\",\"instruction\":\"Give English sentences with demonstratives (this, that, these, those) for translation using kore/sore/are/dore.\"},\"set-phrases\":{\"name\":\"Everyday Set Phrases\",\"instruction\":\"Give common situations in English and ask the student what Japanese set phrase would be appropriate (e.g., 'What do you say before eating?' → 'itadakimasu').\"},\"japanese-food\":{\"name\":\"Talking About Japanese Food\",\"instruction\":\"Give English sentences about Japanese food, meals, and eating habits for translation.\"},\"school-life-japan\":{\"name\":\"School Life in Japan\",\"instruction\":\"Give English sentences about school activities and experiences for translation using school-related vocabulary.\"},\"work-culture-japan\":{\"name\":\"Work Culture in Japan\",\"instruction\":\"Give English sentences about work situations and customs for translation using work-related vocabulary.\"},\"seasonal-events\":{\"name\":\"Seasonal Events in Japan\",\"instruction\":\"Give English sentences about seasonal events and traditions for translation.\"},\"hobbies\":{\"name\":\"Hobbies\",\"instruction\":\"Give English sentences about hobbies and leisure activities for translation.\"},\"trains-and-transport\":{\"name\":\"Trains and Public Transport\",\"instruction\":\"Give English sentences about using public transportation for translation.\"},\"agreeing-disagreeing\":{\"name\":\"Agreeing and Disagreeing Softly\",\"instruction\":\"Give English expressions of agreement or disagreement for translation using polite Japanese forms.\"},\"asking-for-clarification\":{\"name\":\"Asking for Clarification\",\"instruction\":\"Give English sentences asking for clarification or repetition for translation.\"}}}"));}),
 "[project]/components/chat-interface.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -286,7 +299,9 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
         }
     }, [
         initialized,
-        topic
+        topic,
+        difficulty,
+        useJapanese
     ]);
     const initializeChat = async ()=>{
         setIsLoading(true);
@@ -467,63 +482,34 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex items-center justify-between p-4 border-b border-border sticky top-0 bg-background/95 backdrop-blur shrink-0",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-col min-w-0 flex-1 mr-2",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-lg font-semibold truncate",
-                                children: "Japanese Learner"
-                            }, void 0, false, {
-                                fileName: "[project]/components/chat-interface.tsx",
-                                lineNumber: 215,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-sm text-muted-foreground truncate",
-                                children: getTopicName()
-                            }, void 0, false, {
-                                fileName: "[project]/components/chat-interface.tsx",
-                                lineNumber: 216,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/chat-interface.tsx",
-                        lineNumber: 214,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                        onClick: onRefresh,
-                        variant: "outline",
-                        size: "sm",
-                        className: "gap-2 bg-transparent shrink-0",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__["RotateCcw"], {
-                                className: "w-4 h-4"
-                            }, void 0, false, {
-                                fileName: "[project]/components/chat-interface.tsx",
-                                lineNumber: 224,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "hidden sm:inline",
-                                children: "Refresh"
-                            }, void 0, false, {
-                                fileName: "[project]/components/chat-interface.tsx",
-                                lineNumber: 225,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/chat-interface.tsx",
-                        lineNumber: 218,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex flex-col min-w-0 flex-1",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-lg font-semibold truncate",
+                            children: "Japanese Learner"
+                        }, void 0, false, {
+                            fileName: "[project]/components/chat-interface.tsx",
+                            lineNumber: 221,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-sm text-muted-foreground truncate",
+                            children: getTopicName()
+                        }, void 0, false, {
+                            fileName: "[project]/components/chat-interface.tsx",
+                            lineNumber: 222,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/chat-interface.tsx",
+                    lineNumber: 220,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/components/chat-interface.tsx",
-                lineNumber: 213,
+                lineNumber: 219,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -534,20 +520,20 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                         isLoading: isLoading
                     }, void 0, false, {
                         fileName: "[project]/components/chat-interface.tsx",
-                        lineNumber: 231,
+                        lineNumber: 230,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         ref: messagesEndRef
                     }, void 0, false, {
                         fileName: "[project]/components/chat-interface.tsx",
-                        lineNumber: 232,
+                        lineNumber: 231,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/chat-interface.tsx",
-                lineNumber: 230,
+                lineNumber: 229,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -562,7 +548,7 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                                     children: "Failed to get response"
                                 }, void 0, false, {
                                     fileName: "[project]/components/chat-interface.tsx",
-                                    lineNumber: 240,
+                                    lineNumber: 239,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -576,20 +562,20 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                                             className: "w-3 h-3"
                                         }, void 0, false, {
                                             fileName: "[project]/components/chat-interface.tsx",
-                                            lineNumber: 248,
+                                            lineNumber: 247,
                                             columnNumber: 17
                                         }, this),
                                         "Retry"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/chat-interface.tsx",
-                                    lineNumber: 241,
+                                    lineNumber: 240,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/chat-interface.tsx",
-                            lineNumber: 239,
+                            lineNumber: 238,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$message$2d$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MessageInput"], {
@@ -599,24 +585,50 @@ function ChatInterface({ topic, difficulty, useJapanese, onRefresh }) {
                             isLoading: isLoading
                         }, void 0, false, {
                             fileName: "[project]/components/chat-interface.tsx",
-                            lineNumber: 253,
+                            lineNumber: 252,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                            onClick: onRefresh,
+                            variant: "outline",
+                            size: "sm",
+                            className: "gap-2 w-full",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__["RotateCcw"], {
+                                    className: "w-4 h-4"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/chat-interface.tsx",
+                                    lineNumber: 264,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    children: "Start New Session"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/chat-interface.tsx",
+                                    lineNumber: 265,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/chat-interface.tsx",
+                            lineNumber: 258,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/chat-interface.tsx",
-                    lineNumber: 237,
+                    lineNumber: 236,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/chat-interface.tsx",
-                lineNumber: 236,
+                lineNumber: 235,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/chat-interface.tsx",
-        lineNumber: 211,
+        lineNumber: 217,
         columnNumber: 5
     }, this);
 }
@@ -1206,6 +1218,7 @@ function Home() {
     const [selectedTopic, setSelectedTopic] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("random");
     const [selectedDifficulty, setSelectedDifficulty] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("elementary");
     const [useJapanese, setUseJapanese] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [chatKey, setChatKey] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const handleStartChat = ()=>{
         setChatStarted(true);
     };
@@ -1214,6 +1227,7 @@ function Home() {
         setSelectedTopic("random");
         setSelectedDifficulty("elementary");
         setUseJapanese(false);
+        setChatKey((prev)=>prev + 1);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "min-h-screen max-w-full overflow-x-hidden bg-background text-foreground flex flex-col",
@@ -1222,12 +1236,12 @@ function Home() {
                 className: "absolute top-4 right-4 z-10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$theme$2d$toggle$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ThemeToggle"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 30,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 29,
+                lineNumber: 31,
                 columnNumber: 7
             }, this),
             !chatStarted ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1243,7 +1257,7 @@ function Home() {
                                     children: "Japanese Learner"
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 37,
+                                    lineNumber: 39,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1251,13 +1265,13 @@ function Home() {
                                     children: "Practice Japanese through conversation"
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 38,
+                                    lineNumber: 40,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 36,
+                            lineNumber: 38,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$topic$2d$selector$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TopicSelector"], {
@@ -1265,7 +1279,7 @@ function Home() {
                             onTopicChange: setSelectedTopic
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 41,
+                            lineNumber: 43,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$difficulty$2d$selector$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DifficultySelector"], {
@@ -1273,7 +1287,7 @@ function Home() {
                             onDifficultyChange: setSelectedDifficulty
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 43,
+                            lineNumber: 45,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$japanese$2d$toggle$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["JapaneseToggle"], {
@@ -1281,7 +1295,7 @@ function Home() {
                             onToggle: setUseJapanese
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 45,
+                            lineNumber: 47,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1290,18 +1304,18 @@ function Home() {
                             children: "Start Learning"
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 47,
+                            lineNumber: 49,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 35,
+                    lineNumber: 37,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 34,
+                lineNumber: 36,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex-1 flex flex-col max-w-full overflow-hidden",
@@ -1310,20 +1324,20 @@ function Home() {
                     difficulty: selectedDifficulty,
                     useJapanese: useJapanese,
                     onRefresh: handleRefresh
-                }, void 0, false, {
+                }, chatKey, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 57,
+                    lineNumber: 59,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 56,
+                lineNumber: 58,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 28,
+        lineNumber: 30,
         columnNumber: 5
     }, this);
 }

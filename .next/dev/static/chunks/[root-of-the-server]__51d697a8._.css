@@ -737,10 +737,6 @@
     margin-top: auto;
   }
 
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
-  }
-
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -4113,8 +4109,14 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:inline {
-      display: inline;
+    .sm\:hidden {
+      display: none;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:w-auto {
+      width: auto;
     }
   }
 

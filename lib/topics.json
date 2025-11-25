@@ -28,7 +28,7 @@
     },
     "tenses": {
       "name": "Present, Past, and Future",
-      "instruction": "Give Japanese sentences in one tense and ask the student to change them to a different tense (e.g., present to past, or past to future). Focus on verb conjugations."
+      "instruction": "Give Japanese sentences in one tense and ask the student to change them to a different tense (e.g., present to past, or past to future). Focus on verb conjugations, and focus on informal speech."
     },
     "negation": {
       "name": "Negation",
@@ -169,10 +169,6 @@
     "telling-time": {
       "name": "Telling Time",
       "instruction": "Give English sentences about time and schedules for translation. Focus on time expressions."
-    },
-    "word-order": {
-      "name": "Japanese Word Order",
-      "instruction": "Give Japanese sentences with scrambled word order. Ask the student to rearrange the words into the correct, natural order."
     },
     "demonstratives": {
       "name": "Demonstratives",
