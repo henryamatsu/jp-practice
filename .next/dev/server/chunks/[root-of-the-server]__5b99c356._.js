@@ -179,6 +179,7 @@ Provide feedback on the student's answer:
 - Provide the correct answer
 - Suggest alternative or more natural ways to say it when appropriate
 - If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
+- Don't bother correcting spacing between romaji
 
 After providing feedback, present the next question that will be provided to you. Be brief and concise.`;
 const QUESTION_GENERATION_INSTRUCTION = `You are a helpful Japanese language tutor creating practice exercises.
@@ -320,7 +321,7 @@ class GeminiEngine {
                 }
             ],
             config: {
-                temperature: 1,
+                temperature: 0.2,
                 systemInstruction,
                 toolConfig: {
                     functionCallingConfig: {

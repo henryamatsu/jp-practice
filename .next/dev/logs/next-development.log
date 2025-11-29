@@ -1,25 +1,17 @@
-[00:00:02.008] Server  LOG      ✓ Ready in 1086ms
-[00:00:05.079] Server  LOG      ○ Compiling / ...
-[00:00:06.221] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+[00:00:01.814] Server  LOG      ✓ Ready in 1175ms
+[00:00:15.696] Server  LOG      ○ Compiling / ...
+[00:00:44.716] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
 Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
-[00:00:06.795] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:07.358] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:07.358] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:07.358] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764086866967}
-[00:00:28.481] Server  LOG     === GENERATED QUESTIONS ===
-[00:00:28.484] Server  LOG     ["Translate to Japanese: I like to play video games in my free time.","Translate to Japanese: My friend is good at playing the guitar.","Translate to Japanese: This weekend, I want to go hiking in the mountains.","Translate to Japanese: Let's watch a movie together tonight, shall we?","Translate to Japanese: She often reads books at the cafe."]
-[00:00:28.485] Server  LOG     ===========================
-[00:08:01.273] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
-[00:08:01.589] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:08:01.920] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:08:01.920] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:08:01.920] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764087341595}
-[00:08:06.308] Server  LOG     === GENERATED QUESTIONS ===
-[00:08:06.310] Server  LOG     ["What time is it now? Please translate to Japanese.","What time does the train to Tokyo leave? Please translate to Japanese.","I usually wake up at 7 AM. Please translate to Japanese.","The meeting will start in 10 minutes. Please translate to Japanese.","What did you do yesterday evening? Please translate to Japanese."]
-[00:08:06.311] Server  LOG     ===========================
-[00:08:30.238] Server  LOG     === SYSTEM INSTRUCTION ===
-[00:08:30.241] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
+[00:00:45.397] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:46.078] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:46.078] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:46.078] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764371754798}
+[00:01:01.870] Server  LOG      ○ Compiling /api/generate-questions ...
+[00:01:03.843] Server  LOG     === GENERATED QUESTIONS ===
+[00:01:03.850] Server  LOG     ["Translate to Japanese: 'Let's go to the park this afternoon.'","Translate to Japanese: 'I will study Japanese tonight.'","Translate to Japanese: 'Shall we eat sushi for dinner?'","Translate to Japanese: 'My friend and I will watch a movie tomorrow.'","Translate to Japanese: 'Let's try that new cafe!'"]
+[00:01:03.850] Server  LOG     ===========================
+[00:01:21.400] Server  LOG     === SYSTEM INSTRUCTION ===
+[00:01:21.403] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
 
 Provide feedback on the student's answer:
 - Tell them if they got it right or wrong
@@ -27,207 +19,14 @@ Provide feedback on the student's answer:
 - Provide the correct answer
 - Suggest alternative or more natural ways to say it when appropriate
 - If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-Be brief and concise. End your response after providing feedback. The system will automatically present the next question to the student, so you should not include any questions in your response.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-
-Difficulty Level: MIDDLE SCHOOL LEVEL: Use common everyday vocabulary that a teenager would use. Sentences should be moderate length (8-12 words). You may use compound sentences with 2 clauses connected by simple conjunctions. Include more varied verb forms (te-form, potential form, basic conditionals). Grammar should include various tenses, polite and casual forms, and common sentence patterns. This is for learners with basic foundation.
-[00:08:30.242] Server  LOG     ===========================
-[00:20:43.674] Server  LOG      ✓ Compiled in 608ms
-[00:20:55.236] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
-[00:20:55.632] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:20:55.977] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:20:55.977] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:20:55.977] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764088115657}
-[00:21:06.658] Server  LOG     === GENERATED QUESTIONS ===
-[00:21:06.662] Server  LOG     ["What do you say to a friend when you meet them unexpectedly on the street?","Your friend offers you some delicious cake. What do you say before taking a bite?","You are leaving your friend's house after a fun visit. What do you say as you leave?","You accidentally bump into someone. What do you say to apologize?","A classmate gives you a small gift. What do you say to thank them?"]
-[00:21:06.663] Server  LOG     ===========================
-[00:21:40.679] Server  LOG     === SYSTEM INSTRUCTION ===
-[00:21:40.682] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-Be brief and concise. End your response after providing feedback. The system will automatically present the next question to the student, so you should not include any questions in your response.
-
-Language Display: Use Japanese characters (hiragana, katakana, and kanji as appropriate for the difficulty level). Include romaji in parentheses when helpful.
-
-Topic Focus: Give common situations in English and ask the student what Japanese set phrase would be appropriate (e.g., 'What do you say before eating?' → 'itadakimasu').
-[00:21:40.683] Server  LOG     ===========================
-[00:25:26.988] Server  LOG     === SYSTEM INSTRUCTION ===
-[00:25:26.991] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-Be brief and concise. End your response after providing feedback. The system will automatically present the next question to the student, so you should not include any questions in your response.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-
-Topic Focus: Give common situations in English and ask the student what Japanese set phrase would be appropriate (e.g., 'What do you say before eating?' → 'itadakimasu').
-[00:25:26.992] Server  LOG     ===========================
-[00:25:33.584] Server  LOG     === SYSTEM INSTRUCTION ===
-[00:25:33.586] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-Be brief and concise. End your response after providing feedback. The system will automatically present the next question to the student, so you should not include any questions in your response.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-
-Topic Focus: Give common situations in English and ask the student what Japanese set phrase would be appropriate (e.g., 'What do you say before eating?' → 'itadakimasu').
-[00:25:33.587] Server  LOG     ===========================
-[00:29:59.683] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
-[00:30:00.023] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:30:00.342] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:30:00.343] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:30:00.343] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764088660026}
-[00:33:05.293] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
-[00:33:05.613] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:33:05.934] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:33:05.934] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:33:05.934] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764088845619}
-[00:33:09.173] Server  LOG     === GENERATED QUESTIONS ===
-[00:33:09.175] Server  LOG     ["What is your favorite season and why?","Describe the weather today in Japanese.","What kind of clothes do you wear in summer?","How do you say 'It is expected to rain tomorrow' in Japanese?","Translate 'Last winter was very cold' into Japanese."]
-[00:33:09.176] Server  LOG     ===========================
-[00:33:37.298] Server  LOG     useJapanese:  false
-[00:33:37.299] Server  LOG     === SYSTEM INSTRUCTION ===
-[00:33:37.301] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-Be brief and concise. End your response after providing feedback. The system will automatically present the next question to the student, so you should not include any questions in your response.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[00:33:37.302] Server  LOG     ===========================
-[00:34:03.096] Server  LOG     useJapanese:  false
-[00:34:03.097] Server  LOG     === SYSTEM INSTRUCTION ===
-[00:34:03.099] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-Be brief and concise. End your response after providing feedback. The system will automatically present the next question to the student, so you should not include any questions in your response.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[00:34:03.099] Server  LOG     ===========================
-[00:34:44.232] Server  LOG     useJapanese:  false
-[00:34:44.233] Server  LOG     === SYSTEM INSTRUCTION ===
-[00:34:44.235] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-Be brief and concise. End your response after providing feedback. The system will automatically present the next question to the student, so you should not include any questions in your response.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[00:34:44.236] Server  LOG     ===========================
-[00:35:34.149] Server  LOG     useJapanese:  false
-[00:35:34.149] Server  LOG     === SYSTEM INSTRUCTION ===
-[00:35:34.151] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-Be brief and concise. End your response after providing feedback. The system will automatically present the next question to the student, so you should not include any questions in your response.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[00:35:34.152] Server  LOG     ===========================
-[00:36:54.426] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
-[00:36:54.700] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:36:55.001] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:36:55.001] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:36:55.001] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764089074675}
-[00:36:59.531] Server  LOG     === GENERATED QUESTIONS ===
-[00:36:59.534] Server  LOG     ["If it rains tomorrow, I will stay home. (ame ga futtara, uchini imasu)","When I finish my homework, I will play games. (shukudai ga owattara, ge-mu o shimasu)","If you eat too much, you will get a stomachache. (tabe sugimouto, onaka ga itaku narimasu)","When the train arrives, we will get on. (densha ga kitara, norimasu)","If I have time this weekend, I want to go to the movies. (shuumatsu ni jikan ga attara, eiga o mi ni ikitai desu)"]
-[00:36:59.535] Server  LOG     ===========================
-[00:38:36.429] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
-[00:38:36.765] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:38:37.166] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:38:37.166] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:38:37.166] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764089176844}
-[00:38:43.395] Server  LOG     === GENERATED QUESTIONS ===
-[00:38:43.398] Server  LOG     ["Translate to Japanese: 'I want to buy a train ticket to Kyoto.'","Fill in the blank: 'Sumimasen, eki wa doko desu ka?' (Excuse me, where is the station?) 'A, eki wa __ desu.' (Ah, the station is ___.) Options: 'kono hoteru no mae' (in front of this hotel), 'ano basu no ato' (after that bus).","Translate to Japanese: 'Is this bus going to the airport?'","Choose the correct sentence: a) 'Takushii o yonde kudasai.' b) 'Takushii o yobimashita.' (I called a taxi.)","Translate to Japanese: 'I will stay at this hotel for three nights.'"]
-[00:38:43.399] Server  LOG     ===========================
-[00:39:03.420] Server  LOG     === SYSTEM INSTRUCTION ===
-[00:39:03.422] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-Be brief and concise. End your response after providing feedback. The system will automatically append the next question to your response, so you should not include any questions in your response.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[00:39:03.423] Server  LOG     ===========================
-[01:45:03.685] Server  LOG      ✓ Compiled in 196ms
-[01:45:09.487] Server  LOG      ✓ Compiled in 127ms
-[01:45:12.576] Server  LOG      ✓ Compiled in 131ms
-[01:45:22.058] Server  LOG      ✓ Compiled in 149ms
-[01:48:32.334] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
-[01:48:32.740] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:48:33.105] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:48:33.105] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[01:48:33.105] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093372788}
-[01:48:37.573] Server  LOG     === GENERATED QUESTIONS ===
-[01:48:37.576] Server  LOG     ["Translate to Japanese: 'What time does the movie start tomorrow?'","Translate to Japanese: 'I usually wake up at 7 AM on weekdays.'","Translate to Japanese: 'The next train to Osaka leaves at 3:30 PM.'","Translate to Japanese: 'Let's meet at the cafe next Saturday around noon.'","Translate to Japanese: 'My birthday is on the 15th of August, which is a Tuesday this year.'"]
-[01:48:37.576] Server  LOG     ===========================
-[01:49:19.674] Server  LOG     === SYSTEM INSTRUCTION ===
-[01:49:19.677] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
+- Don't bother correcting spacing between romaji
 
 After providing feedback, present the next question that will be provided to you. Be brief and concise.
 
 Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[01:49:19.678] Server  LOG     ===========================
-[01:50:17.882] Server  LOG     === SYSTEM INSTRUCTION ===
-[01:50:17.884] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
+[00:01:21.404] Server  LOG     ===========================
+[00:01:40.936] Server  LOG     === SYSTEM INSTRUCTION ===
+[00:01:40.938] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
 
 Provide feedback on the student's answer:
 - Tell them if they got it right or wrong
@@ -235,13 +34,14 @@ Provide feedback on the student's answer:
 - Provide the correct answer
 - Suggest alternative or more natural ways to say it when appropriate
 - If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
+- Don't bother correcting spacing between romaji
 
 After providing feedback, present the next question that will be provided to you. Be brief and concise.
 
 Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[01:50:17.885] Server  LOG     ===========================
-[01:51:04.964] Server  LOG     === SYSTEM INSTRUCTION ===
-[01:51:04.966] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
+[00:01:40.939] Server  LOG     ===========================
+[00:01:59.842] Server  LOG     === SYSTEM INSTRUCTION ===
+[00:01:59.845] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
 
 Provide feedback on the student's answer:
 - Tell them if they got it right or wrong
@@ -249,13 +49,14 @@ Provide feedback on the student's answer:
 - Provide the correct answer
 - Suggest alternative or more natural ways to say it when appropriate
 - If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
+- Don't bother correcting spacing between romaji
 
 After providing feedback, present the next question that will be provided to you. Be brief and concise.
 
 Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[01:51:04.967] Server  LOG     ===========================
-[01:53:24.743] Server  LOG     === SYSTEM INSTRUCTION ===
-[01:53:24.745] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
+[00:01:59.846] Server  LOG     ===========================
+[00:02:38.321] Server  LOG     === SYSTEM INSTRUCTION ===
+[00:02:38.324] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
 
 Provide feedback on the student's answer:
 - Tell them if they got it right or wrong
@@ -263,13 +64,14 @@ Provide feedback on the student's answer:
 - Provide the correct answer
 - Suggest alternative or more natural ways to say it when appropriate
 - If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
+- Don't bother correcting spacing between romaji
 
 After providing feedback, present the next question that will be provided to you. Be brief and concise.
 
 Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[01:53:24.746] Server  LOG     ===========================
-[01:55:48.498] Server  LOG     === SYSTEM INSTRUCTION ===
-[01:55:48.499] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
+[00:02:38.325] Server  LOG     ===========================
+[00:03:19.343] Server  LOG     === SYSTEM INSTRUCTION ===
+[00:03:19.345] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
 
 Provide feedback on the student's answer:
 - Tell them if they got it right or wrong
@@ -277,22 +79,14 @@ Provide feedback on the student's answer:
 - Provide the correct answer
 - Suggest alternative or more natural ways to say it when appropriate
 - If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
+- Don't bother correcting spacing between romaji
 
 After providing feedback, present the next question that will be provided to you. Be brief and concise.
 
 Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[01:55:48.500] Server  LOG     ===========================
-[01:57:23.672] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
-[01:57:23.921] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:57:24.217] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:57:24.217] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[01:57:24.217] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093903899}
-[01:57:27.694] Server  LOG     === GENERATED QUESTIONS ===
-[01:57:27.695] Server  LOG     ["Translate to Japanese: My name is Ken Tanaka. I am a high school student.","Translate to Japanese: I am 15 years old. I live in Tokyo.","Translate to Japanese: I came here from Osaka last year. I like baseball.","Translate to Japanese: My father is a doctor. My mother is a teacher.","Translate to Japanese: Nice to meet you. I hope we can be good friends."]
-[01:57:27.696] Server  LOG     ===========================
-[01:57:55.799] Server  LOG     === SYSTEM INSTRUCTION ===
-[01:57:55.800] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
+[00:03:19.346] Server  LOG     ===========================
+[00:03:51.844] Server  LOG     === SYSTEM INSTRUCTION ===
+[00:03:51.847] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
 
 Provide feedback on the student's answer:
 - Tell them if they got it right or wrong
@@ -300,13 +94,14 @@ Provide feedback on the student's answer:
 - Provide the correct answer
 - Suggest alternative or more natural ways to say it when appropriate
 - If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
+- Don't bother correcting spacing between romaji
 
 After providing feedback, present the next question that will be provided to you. Be brief and concise.
 
 Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[01:57:55.801] Server  LOG     ===========================
-[01:59:08.417] Server  LOG     === SYSTEM INSTRUCTION ===
-[01:59:08.419] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
+[00:03:51.848] Server  LOG     ===========================
+[00:05:17.552] Server  LOG     === SYSTEM INSTRUCTION ===
+[00:05:17.555] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
 
 Provide feedback on the student's answer:
 - Tell them if they got it right or wrong
@@ -314,13 +109,14 @@ Provide feedback on the student's answer:
 - Provide the correct answer
 - Suggest alternative or more natural ways to say it when appropriate
 - If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
+- Don't bother correcting spacing between romaji
 
 After providing feedback, present the next question that will be provided to you. Be brief and concise.
 
 Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[01:59:08.419] Server  LOG     ===========================
-[01:59:54.268] Server  LOG     === SYSTEM INSTRUCTION ===
-[01:59:54.270] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
+[00:05:17.556] Server  LOG     ===========================
+[00:09:31.487] Server  LOG     === SYSTEM INSTRUCTION ===
+[00:09:31.489] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
 
 Provide feedback on the student's answer:
 - Tell them if they got it right or wrong
@@ -328,50 +124,12 @@ Provide feedback on the student's answer:
 - Provide the correct answer
 - Suggest alternative or more natural ways to say it when appropriate
 - If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
+- Don't bother correcting spacing between romaji
 
 After providing feedback, present the next question that will be provided to you. Be brief and concise.
 
 Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[01:59:54.271] Server  LOG     ===========================
-[02:00:30.762] Server  LOG     === SYSTEM INSTRUCTION ===
-[02:00:30.764] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-After providing feedback, present the next question that will be provided to you. Be brief and concise.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[02:00:30.765] Server  LOG     ===========================
-[02:01:01.901] Server  LOG     === SYSTEM INSTRUCTION ===
-[02:01:01.903] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-After providing feedback, present the next question that will be provided to you. Be brief and concise.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[02:01:01.904] Server  LOG     ===========================
-[02:01:37.058] Server  LOG     === SYSTEM INSTRUCTION ===
-[02:01:37.060] Server  LOG     You are a helpful Japanese language tutor providing feedback on student answers.
-
-Provide feedback on the student's answer:
-- Tell them if they got it right or wrong
-- If wrong, explain what was incorrect
-- Provide the correct answer
-- Suggest alternative or more natural ways to say it when appropriate
-- If the user responded with English or with a loanword, give them native Japanese words to use instead except where the loanword is most natural
-
-After providing feedback, present the next question that will be provided to you. Be brief and concise.
-
-Language Display: Use ONLY romaji (romanized Japanese). Do NOT use any Japanese characters (hiragana, katakana, or kanji). All Japanese text must be written in romaji.
-[02:01:37.061] Server  LOG     ===========================
+[00:09:31.490] Server  LOG     ===========================
+[00:28:02.766] Server  LOG     === GENERATED QUESTIONS ===
+[00:28:02.768] Server  LOG     ["What did you say? Please say it again.","Could you repeat that, please?","I didn't quite catch that. Can you say it one more time?","Sorry, I missed that. Could you repeat that?","What was that? I didn't hear you."]
+[00:28:02.769] Server  LOG     ===========================
