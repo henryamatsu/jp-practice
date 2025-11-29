@@ -30,7 +30,8 @@ Generate 5 diverse and engaging practice questions for the student. Each questio
 - Test different aspects of the topic
 - Be appropriate for the difficulty level
 - Be engaging and practical
-- When asking the studentto translate English sentences, do NOT provide the romaji translation
+- When asking the student to translate English sentences, do NOT provide the romaji translation
+- Do not ask fill in the blank questions
 
 Return the questions as a JSON array.`;
 

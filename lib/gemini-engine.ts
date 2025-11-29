@@ -165,7 +165,7 @@ class GeminiEngine {
         },
       ],
       config: {
-        temperature: 0.2, // High temperature for diversity
+        temperature: 1, // High temperature for diversity
         systemInstruction,
         toolConfig: {
           functionCallingConfig: {
